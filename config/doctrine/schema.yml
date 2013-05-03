@@ -1,0 +1,150 @@
+Advert:
+  actAs: [Timestampable]
+  columns:
+    id:
+      type: integer(11)
+      unique: true
+      autoincrement: true
+      primary: true
+      notnull: true
+    type_id: 
+      type: integer(1)
+      unique: false
+      autoincrement: false
+      primary: false
+      notnull: true
+    type_route_id: 
+      type: integer(1)
+      unique: false
+      autoincrement: false
+      primary: false
+      notnull: true
+    direction_id: 
+      type: integer(1)
+      unique: false
+      autoincrement: false
+      primary: false
+      notnull: true
+    start_location: 
+      type: string(255)
+      unique: false
+      autoincrement: false
+      primary: false
+      notnull: true
+    end_location: 
+      type: string(255)
+      unique: false
+      autoincrement: false
+      primary: false
+      notnull: true
+    middle_location: 
+      type: string(255)
+      unique: false
+      autoincrement: false
+      primary: false
+      notnull: true
+    time: 
+      type: timestamp
+      unique: false
+      autoincrement: false
+      primary: false
+      notnull: true
+    p_number: 
+      type: integer(3)
+      unique: false
+      autoincrement: false
+      primary: false
+      notnull: true
+    comment:
+      type: string(512)
+      unique: false
+      autoincrement: false
+      primary: false
+      notnull: true
+  relations:
+    TypeAdvert:
+      local: id
+      foreign: type_id
+      foreignAlias: typeAdvert
+    TypeRoute:
+      local: id
+      foreign: type_route_id
+      foreignAlias: typeRoute
+    Direction:
+      local: id
+      foreign: direction_id
+      foreignAlias: direction
+      
+TypeAdvert:
+  columns:
+    id:
+      type: integer(11)
+      unique: true
+      autoincrement: true
+      primary: true
+      notnull: true
+    name: 
+      type: string(255)
+      unique: false
+      autoincrement: false
+      primary: false
+      notnull: true
+      
+AcceptedPersons:
+  actAs: [Timestampable]
+  columns:
+    id:
+      type: integer(11)
+      unique: true
+      autoincrement: true
+      primary: true
+      notnull: true
+    avdert_id:
+      type: integer(11)
+      unique: false
+      autoincrement: false
+      primary: false
+      notnull: true
+    user_id:
+      type: integer(11)
+      unique: false
+      autoincrement: false
+      primary: false
+      notnull: true
+  relations:
+    Advert:
+      local: id
+      foreign: advert_id
+      foreignAlias: advert
+    Users:
+      local: id
+      foreign: user_id
+      foreignAlias: user
+TypeRoute:
+  columns:
+    id:
+      type: integer(11)
+      unique: true
+      autoincrement: true
+      primary: true
+      notnull: true
+    name: 
+      type: string(255)
+      unique: false
+      autoincrement: false
+      primary: false
+      notnull: true
+Direction:
+  columns:
+    id:
+      type: integer(11)
+      unique: true
+      autoincrement: true
+      primary: true
+      notnull: true
+    name: 
+      type: string(255)
+      unique: false
+      autoincrement: false
+      primary: false
+      notnull: true

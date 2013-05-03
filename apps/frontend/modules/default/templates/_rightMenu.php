@@ -12,7 +12,7 @@
         <br>
         </br>
         <div class="menuItemViewAdverts">
-            <a class="menuItemViewAdverts" href="<?php echo url_for("travelRoute/addPasager"); ?>">Vizualizare anunțuri</a>
+            <a class="menuItemViewAdverts" href="<?php echo url_for("viewAdverts/adverts"); ?>">Vizualizare anunțuri</a>
         </div>
     </div>
 </fieldset>

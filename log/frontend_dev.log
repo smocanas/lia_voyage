@@ -9629,3 +9629,756 @@ Apr 28 14:05:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Fou
 Apr 28 14:05:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
 Apr 28 14:05:52 symfony [info] {sfWebDebugLogger} Configuration 8.76 ms (5)
 Apr 28 14:05:52 symfony [info] {sfWebDebugLogger} Factories 398.59 ms (1)
+Apr 28 16:36:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 16:36:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 16:36:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 16:36:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 16:36:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 16:36:57 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Apr 28 16:36:57 symfony [info] {myUser} Automatic user logout due to timeout
+Apr 28 16:36:57 symfony [info] {myUser} User is not authenticated
+Apr 28 16:36:57 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Apr 28 16:36:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 28 16:36:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 28 16:36:57 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Apr 28 16:36:57 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/default/templates/indexSuccess.php"
+Apr 28 16:36:57 symfony [info] {sfPHPView} Decorate content with "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 16:36:57 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 16:36:57 symfony [info] {main} Call "sfGuardAuth->executeSignin_form()"
+Apr 28 16:36:57 symfony [info] {sfPartialView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/sfGuardAuth/templates/_signin_form.php"
+Apr 28 16:36:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 28 16:36:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 16:36:57 symfony [info] {sfWebDebugLogger} Configuration 770.40 ms (11)
+Apr 28 16:36:57 symfony [info] {sfWebDebugLogger} Factories 411.35 ms (1)
+Apr 28 16:36:57 symfony [info] {sfWebDebugLogger} Action "default/index" 0.36 ms (1)
+Apr 28 16:36:57 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 188.60 ms (1)
+Apr 28 16:36:57 symfony [info] {sfWebDebugLogger} Component "sfGuardAuth/signin_form" 43.36 ms (1)
+Apr 28 16:36:57 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 42.62 ms (1)
+Apr 28 16:36:57 symfony [info] {sfWebResponse} Send content (39030 o)
+Apr 28 16:37:10 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 16:37:10 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 16:37:10 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 16:37:10 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 16:37:10 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 16:37:10 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Apr 28 16:37:10 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Apr 28 16:37:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 28 16:37:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 28 16:37:10 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Apr 28 16:37:10 symfony [err] {Doctrine_Connection_Exception} PDO Connection Error: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)
+Apr 28 16:37:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 28 16:37:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 16:37:11 symfony [info] {sfWebDebugLogger} Configuration 59.20 ms (9)
+Apr 28 16:37:11 symfony [info] {sfWebDebugLogger} Factories 68.26 ms (1)
+Apr 28 16:37:11 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 283.32 ms (1)
+Apr 28 16:37:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 16:37:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 16:37:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 16:37:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 16:37:37 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 16:37:37 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Apr 28 16:37:37 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Apr 28 16:37:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 28 16:37:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 28 16:37:37 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Apr 28 16:37:37 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/default/templates/indexSuccess.php"
+Apr 28 16:37:37 symfony [info] {sfPHPView} Decorate content with "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 16:37:37 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 16:37:37 symfony [info] {main} Call "sfGuardAuth->executeSignin_form()"
+Apr 28 16:37:37 symfony [info] {sfPartialView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/sfGuardAuth/templates/_signin_form.php"
+Apr 28 16:37:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 28 16:37:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 16:37:37 symfony [info] {sfWebDebugLogger} Configuration 39.13 ms (12)
+Apr 28 16:37:37 symfony [info] {sfWebDebugLogger} Factories 66.01 ms (1)
+Apr 28 16:37:37 symfony [info] {sfWebDebugLogger} Action "default/index" 0.29 ms (1)
+Apr 28 16:37:37 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 57.44 ms (1)
+Apr 28 16:37:37 symfony [info] {sfWebDebugLogger} Component "sfGuardAuth/signin_form" 13.46 ms (1)
+Apr 28 16:37:37 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 10.19 ms (1)
+Apr 28 16:37:37 symfony [info] {sfWebResponse} Send content (38262 o)
+Apr 28 16:37:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 16:37:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 16:37:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 16:37:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 16:37:45 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 16:37:45 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Apr 28 16:37:45 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Apr 28 16:37:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 28 16:37:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 28 16:37:45 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Apr 28 16:37:45 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 28 16:37:45 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.username = ? AND s.is_active = ?) - (admin, 1)
+Apr 28 16:37:45 symfony [info] {myUser} User is authenticated
+Apr 28 16:37:45 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_user_permission s2 ON s.id = s2.permission_id WHERE (s2.user_id IN (?)) - (1)
+Apr 28 16:37:45 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.group_id AS s2__group_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_group s LEFT JOIN sf_guard_user_group s2 ON s.id = s2.group_id WHERE (s2.user_id IN (?)) - (1)
+Apr 28 16:37:45 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.group_id AS s2__group_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_group_permission s2 ON s.id = s2.permission_id WHERE (s2.group_id IN (?)) - (1)
+Apr 28 16:37:45 symfony [info] {myUser} Add credential(s) "admin"
+Apr 28 16:37:45 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE sf_guard_user SET last_login = ?, updated_at = ? WHERE id = ? - (2013-04-28 16:37:45, 2013-04-28 16:37:45, 1)
+Apr 28 16:37:45 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (1)
+Apr 28 16:37:45 symfony [info] {sfFrontWebController} Redirect to "http://voyage.localhost/frontend_dev.php"
+Apr 28 16:37:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Apr 28 16:37:45 symfony [info] {sfWebResponse} Send header "Location: http://voyage.localhost/frontend_dev.php"
+Apr 28 16:37:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 16:37:45 symfony [info] {sfWebDebugLogger} Configuration 11.29 ms (8)
+Apr 28 16:37:45 symfony [info] {sfWebDebugLogger} Factories 62.77 ms (1)
+Apr 28 16:37:45 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 571.88 ms (1)
+Apr 28 16:37:45 symfony [info] {sfWebDebugLogger} Database (Doctrine) 175.08 ms (7)
+Apr 28 16:37:45 symfony [info] {sfWebResponse} Send content (111 o)
+Apr 28 16:37:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 16:37:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 16:37:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 16:37:46 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 16:37:46 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 16:37:46 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Apr 28 16:37:46 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Apr 28 16:37:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 28 16:37:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 28 16:37:46 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Apr 28 16:37:46 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/default/templates/indexSuccess.php"
+Apr 28 16:37:46 symfony [info] {sfPHPView} Decorate content with "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 16:37:46 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 16:37:46 symfony [info] {main} Call "default->executeRightMenu()"
+Apr 28 16:37:46 symfony [info] {sfPartialView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/default/templates/_rightMenu.php"
+Apr 28 16:37:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 28 16:37:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 16:37:46 symfony [info] {sfWebDebugLogger} Configuration 15.98 ms (11)
+Apr 28 16:37:46 symfony [info] {sfWebDebugLogger} Factories 81.29 ms (1)
+Apr 28 16:37:46 symfony [info] {sfWebDebugLogger} Action "default/index" 0.34 ms (1)
+Apr 28 16:37:46 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 42.93 ms (1)
+Apr 28 16:37:46 symfony [info] {sfWebDebugLogger} Component "default/rightMenu" 0.04 ms (1)
+Apr 28 16:37:46 symfony [info] {sfWebDebugLogger} Partial "default/_rightMenu" 4.84 ms (1)
+Apr 28 16:37:46 symfony [info] {sfWebResponse} Send content (36214 o)
+Apr 28 16:41:40 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 16:41:40 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 16:41:40 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 16:41:40 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 16:41:40 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 16:41:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /travelRoute/addPasager with parameters array (  'module' => 'travelRoute',  'action' => 'addPasager',)
+Apr 28 16:41:41 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Apr 28 16:41:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 28 16:41:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 28 16:41:41 symfony [info] {travelRouteActions} Call "travelRouteActions->executeAddPasager()"
+Apr 28 16:41:41 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/travelRoute/templates/addPasagerSuccess.php"
+Apr 28 16:41:41 symfony [info] {sfPHPView} Decorate content with "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 16:41:41 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 16:41:41 symfony [info] {main} Call "default->executeRightMenu()"
+Apr 28 16:41:41 symfony [info] {sfPartialView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/default/templates/_rightMenu.php"
+Apr 28 16:41:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 28 16:41:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 16:41:41 symfony [info] {sfWebDebugLogger} Configuration 60.87 ms (12)
+Apr 28 16:41:41 symfony [info] {sfWebDebugLogger} Factories 65.89 ms (1)
+Apr 28 16:41:41 symfony [info] {sfWebDebugLogger} Action "travelRoute/addPasager" 0.29 ms (1)
+Apr 28 16:41:41 symfony [info] {sfWebDebugLogger} View "Success" for "travelRoute/addPasager" 45.41 ms (1)
+Apr 28 16:41:41 symfony [info] {sfWebDebugLogger} Component "default/rightMenu" 0.04 ms (1)
+Apr 28 16:41:41 symfony [info] {sfWebDebugLogger} Partial "default/_rightMenu" 3.61 ms (1)
+Apr 28 16:41:41 symfony [info] {sfWebResponse} Send content (41597 o)
+Apr 28 16:41:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 16:41:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 16:41:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 16:41:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 16:41:41 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 16:41:41 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /travelRoute/images/logo.png with parameters array (  'module' => 'travelRoute',  'action' => 'images',  'logo.png' => true,)
+Apr 28 16:41:41 symfony [info] {sfFrontWebController} Action "travelRoute/images" does not exist
+Apr 28 16:41:41 symfony [err] {sfError404Exception} Action "travelRoute/images" does not exist.
+Apr 28 16:41:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 28 16:41:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 16:41:41 symfony [info] {sfWebDebugLogger} Configuration 8.18 ms (5)
+Apr 28 16:41:41 symfony [info] {sfWebDebugLogger} Factories 120.45 ms (1)
+Apr 28 16:41:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 16:41:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 16:41:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 16:41:41 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 16:41:41 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 16:41:41 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /travelRoute/images/top.png with parameters array (  'module' => 'travelRoute',  'action' => 'images',  'top.png' => true,)
+Apr 28 16:41:41 symfony [info] {sfFrontWebController} Action "travelRoute/images" does not exist
+Apr 28 16:41:41 symfony [err] {sfError404Exception} Action "travelRoute/images" does not exist.
+Apr 28 16:41:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 28 16:41:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 16:41:41 symfony [info] {sfWebDebugLogger} Configuration 7.42 ms (5)
+Apr 28 16:41:41 symfony [info] {sfWebDebugLogger} Factories 74.41 ms (1)
+Apr 28 16:44:13 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 16:44:13 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 16:44:13 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 16:44:13 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 16:44:13 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 16:44:13 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /travelRoute/addPasager with parameters array (  'module' => 'travelRoute',  'action' => 'addPasager',)
+Apr 28 16:44:13 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Apr 28 16:44:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 28 16:44:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 28 16:44:13 symfony [info] {travelRouteActions} Call "travelRouteActions->executeAddPasager()"
+Apr 28 16:44:13 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/travelRoute/templates/addPasagerSuccess.php"
+Apr 28 16:44:14 symfony [info] {sfPHPView} Decorate content with "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 16:44:14 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 16:44:14 symfony [info] {main} Call "default->executeRightMenu()"
+Apr 28 16:44:14 symfony [info] {sfPartialView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/default/templates/_rightMenu.php"
+Apr 28 16:44:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 28 16:44:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 16:44:14 symfony [info] {sfWebDebugLogger} Configuration 15.97 ms (11)
+Apr 28 16:44:14 symfony [info] {sfWebDebugLogger} Factories 66.76 ms (1)
+Apr 28 16:44:14 symfony [info] {sfWebDebugLogger} Action "travelRoute/addPasager" 0.45 ms (1)
+Apr 28 16:44:14 symfony [info] {sfWebDebugLogger} View "Success" for "travelRoute/addPasager" 32.88 ms (1)
+Apr 28 16:44:14 symfony [info] {sfWebDebugLogger} Component "default/rightMenu" 0.04 ms (1)
+Apr 28 16:44:14 symfony [info] {sfWebDebugLogger} Partial "default/_rightMenu" 4.05 ms (1)
+Apr 28 16:44:14 symfony [info] {sfWebResponse} Send content (41616 o)
+Apr 28 16:44:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 16:44:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 16:44:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 16:44:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 16:44:14 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 16:44:14 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /travelRoute/images/logo.png with parameters array (  'module' => 'travelRoute',  'action' => 'images',  'logo.png' => true,)
+Apr 28 16:44:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 16:44:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 16:44:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 16:44:14 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 16:44:14 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 16:44:14 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /travelRoute/images/top.png with parameters array (  'module' => 'travelRoute',  'action' => 'images',  'top.png' => true,)
+Apr 28 16:44:14 symfony [info] {sfFrontWebController} Action "travelRoute/images" does not exist
+Apr 28 16:44:14 symfony [err] {sfError404Exception} Action "travelRoute/images" does not exist.
+Apr 28 16:44:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 28 16:44:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 16:44:14 symfony [info] {sfWebDebugLogger} Configuration 7.78 ms (5)
+Apr 28 16:44:14 symfony [info] {sfWebDebugLogger} Factories 168.24 ms (1)
+Apr 28 16:44:14 symfony [info] {sfFrontWebController} Action "travelRoute/images" does not exist
+Apr 28 16:44:14 symfony [err] {sfError404Exception} Action "travelRoute/images" does not exist.
+Apr 28 16:44:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 28 16:44:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 16:44:14 symfony [info] {sfWebDebugLogger} Configuration 8.43 ms (5)
+Apr 28 16:44:14 symfony [info] {sfWebDebugLogger} Factories 236.18 ms (1)
+Apr 28 16:44:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 16:44:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 16:44:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 16:44:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 16:44:16 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 16:44:16 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /travelRoute/addPasager with parameters array (  'module' => 'travelRoute',  'action' => 'addPasager',)
+Apr 28 16:44:16 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Apr 28 16:44:16 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 28 16:44:16 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 28 16:44:16 symfony [info] {travelRouteActions} Call "travelRouteActions->executeAddPasager()"
+Apr 28 16:44:16 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/travelRoute/templates/addPasagerSuccess.php"
+Apr 28 16:44:16 symfony [info] {sfPHPView} Decorate content with "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 16:44:16 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 16:44:16 symfony [info] {main} Call "default->executeRightMenu()"
+Apr 28 16:44:16 symfony [info] {sfPartialView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/default/templates/_rightMenu.php"
+Apr 28 16:44:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 28 16:44:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 16:44:16 symfony [info] {sfWebDebugLogger} Configuration 13.90 ms (11)
+Apr 28 16:44:16 symfony [info] {sfWebDebugLogger} Factories 63.88 ms (1)
+Apr 28 16:44:16 symfony [info] {sfWebDebugLogger} Action "travelRoute/addPasager" 0.39 ms (1)
+Apr 28 16:44:16 symfony [info] {sfWebDebugLogger} View "Success" for "travelRoute/addPasager" 29.87 ms (1)
+Apr 28 16:44:16 symfony [info] {sfWebDebugLogger} Component "default/rightMenu" 0.04 ms (1)
+Apr 28 16:44:16 symfony [info] {sfWebDebugLogger} Partial "default/_rightMenu" 3.96 ms (1)
+Apr 28 16:44:16 symfony [info] {sfWebResponse} Send content (41648 o)
+Apr 28 16:44:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 16:44:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 16:44:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 16:44:16 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 16:44:16 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 16:44:16 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /travelRoute/images/logo.png with parameters array (  'module' => 'travelRoute',  'action' => 'images',  'logo.png' => true,)
+Apr 28 16:44:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 16:44:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 16:44:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 16:44:17 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 16:44:17 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 16:44:17 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /travelRoute/images/top.png with parameters array (  'module' => 'travelRoute',  'action' => 'images',  'top.png' => true,)
+Apr 28 16:44:17 symfony [info] {sfFrontWebController} Action "travelRoute/images" does not exist
+Apr 28 16:44:17 symfony [err] {sfError404Exception} Action "travelRoute/images" does not exist.
+Apr 28 16:44:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 28 16:44:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 16:44:17 symfony [info] {sfWebDebugLogger} Configuration 12.39 ms (5)
+Apr 28 16:44:17 symfony [info] {sfWebDebugLogger} Factories 181.87 ms (1)
+Apr 28 16:44:17 symfony [info] {sfFrontWebController} Action "travelRoute/images" does not exist
+Apr 28 16:44:17 symfony [err] {sfError404Exception} Action "travelRoute/images" does not exist.
+Apr 28 16:44:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 28 16:44:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 16:44:17 symfony [info] {sfWebDebugLogger} Configuration 7.92 ms (5)
+Apr 28 16:44:17 symfony [info] {sfWebDebugLogger} Factories 282.57 ms (1)
+Apr 28 16:44:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 16:44:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 16:44:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 16:44:19 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 16:44:19 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 16:44:19 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /viewAdverts/adverts with parameters array (  'module' => 'viewAdverts',  'action' => 'adverts',)
+Apr 28 16:44:19 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Apr 28 16:44:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 28 16:44:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 28 16:44:19 symfony [info] {viewAdvertsActions} Call "viewAdvertsActions->executeAdverts()"
+Apr 28 16:44:19 symfony [err] {sfRenderException} The template "advertsSuccess.php" does not exist or is unreadable in "".
+Apr 28 16:44:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Apr 28 16:44:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 16:44:19 symfony [info] {sfWebDebugLogger} Configuration 69.77 ms (10)
+Apr 28 16:44:19 symfony [info] {sfWebDebugLogger} Factories 68.15 ms (1)
+Apr 28 16:44:19 symfony [info] {sfWebDebugLogger} Action "viewAdverts/adverts" 0.29 ms (1)
+Apr 28 16:44:19 symfony [info] {sfWebDebugLogger} View "Success" for "viewAdverts/adverts" 72.87 ms (1)
+Apr 28 16:45:03 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 16:45:03 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 16:45:03 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 16:45:03 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 16:45:03 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 16:45:03 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /viewAdverts/adverts with parameters array (  'module' => 'viewAdverts',  'action' => 'adverts',)
+Apr 28 16:45:03 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Apr 28 16:45:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 28 16:45:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 28 16:45:03 symfony [info] {viewAdvertsActions} Call "viewAdvertsActions->executeAdverts()"
+Apr 28 16:45:03 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/viewAdverts/templates/advertsSuccess.php"
+Apr 28 16:45:03 symfony [info] {sfPHPView} Decorate content with "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 16:45:03 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 16:45:04 symfony [info] {main} Call "default->executeRightMenu()"
+Apr 28 16:45:04 symfony [info] {sfPartialView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/default/templates/_rightMenu.php"
+Apr 28 16:45:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 28 16:45:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 16:45:04 symfony [info] {sfWebDebugLogger} Configuration 24.82 ms (11)
+Apr 28 16:45:04 symfony [info] {sfWebDebugLogger} Factories 67.75 ms (1)
+Apr 28 16:45:04 symfony [info] {sfWebDebugLogger} Action "viewAdverts/adverts" 0.37 ms (1)
+Apr 28 16:45:04 symfony [info] {sfWebDebugLogger} View "Success" for "viewAdverts/adverts" 45.44 ms (1)
+Apr 28 16:45:04 symfony [info] {sfWebDebugLogger} Component "default/rightMenu" 0.04 ms (1)
+Apr 28 16:45:04 symfony [info] {sfWebDebugLogger} Partial "default/_rightMenu" 5.05 ms (1)
+Apr 28 16:45:04 symfony [info] {sfWebResponse} Send content (36569 o)
+Apr 28 16:45:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 16:45:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 16:45:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 16:45:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 16:45:04 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 16:45:04 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /viewAdverts/images/top.png with parameters array (  'module' => 'viewAdverts',  'action' => 'images',  'top.png' => true,)
+Apr 28 16:45:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 16:45:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 16:45:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 16:45:04 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 16:45:04 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 16:45:04 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /viewAdverts/images/logo.png with parameters array (  'module' => 'viewAdverts',  'action' => 'images',  'logo.png' => true,)
+Apr 28 16:45:04 symfony [info] {sfFrontWebController} Action "viewAdverts/images" does not exist
+Apr 28 16:45:04 symfony [err] {sfError404Exception} Action "viewAdverts/images" does not exist.
+Apr 28 16:45:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 28 16:45:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 16:45:04 symfony [info] {sfWebDebugLogger} Configuration 7.46 ms (5)
+Apr 28 16:45:04 symfony [info] {sfWebDebugLogger} Factories 122.47 ms (1)
+Apr 28 16:45:04 symfony [info] {sfFrontWebController} Action "viewAdverts/images" does not exist
+Apr 28 16:45:04 symfony [err] {sfError404Exception} Action "viewAdverts/images" does not exist.
+Apr 28 16:45:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 28 16:45:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 16:45:04 symfony [info] {sfWebDebugLogger} Configuration 9.06 ms (5)
+Apr 28 16:45:04 symfony [info] {sfWebDebugLogger} Factories 243.94 ms (1)
+Apr 28 17:00:23 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 17:00:23 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 17:00:23 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 17:00:23 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 17:00:23 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 17:00:23 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /viewAdverts/adverts with parameters array (  'module' => 'viewAdverts',  'action' => 'adverts',)
+Apr 28 17:00:24 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Apr 28 17:00:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 28 17:00:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 28 17:00:24 symfony [info] {viewAdvertsActions} Call "viewAdvertsActions->executeAdverts()"
+Apr 28 17:00:24 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/viewAdverts/templates/advertsSuccess.php"
+Apr 28 17:00:24 symfony [info] {sfPHPView} Decorate content with "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 17:00:24 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 17:00:24 symfony [info] {main} Call "default->executeRightMenu()"
+Apr 28 17:00:24 symfony [info] {sfPartialView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/default/templates/_rightMenu.php"
+Apr 28 17:00:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 28 17:00:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 17:00:24 symfony [info] {sfWebDebugLogger} Configuration 19.60 ms (11)
+Apr 28 17:00:24 symfony [info] {sfWebDebugLogger} Factories 67.84 ms (1)
+Apr 28 17:00:24 symfony [info] {sfWebDebugLogger} Action "viewAdverts/adverts" 0.30 ms (1)
+Apr 28 17:00:24 symfony [info] {sfWebDebugLogger} View "Success" for "viewAdverts/adverts" 42.96 ms (1)
+Apr 28 17:00:24 symfony [info] {sfWebDebugLogger} Component "default/rightMenu" 0.05 ms (1)
+Apr 28 17:00:24 symfony [info] {sfWebDebugLogger} Partial "default/_rightMenu" 4.05 ms (1)
+Apr 28 17:00:24 symfony [info] {sfWebResponse} Send content (36683 o)
+Apr 28 17:00:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 17:00:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 17:00:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 17:00:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 17:00:24 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 17:00:24 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /viewAdverts/images/logo.png with parameters array (  'module' => 'viewAdverts',  'action' => 'images',  'logo.png' => true,)
+Apr 28 17:00:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 17:00:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 17:00:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 17:00:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 17:00:24 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 17:00:24 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /viewAdverts/images/top.png with parameters array (  'module' => 'viewAdverts',  'action' => 'images',  'top.png' => true,)
+Apr 28 17:00:24 symfony [info] {sfFrontWebController} Action "viewAdverts/images" does not exist
+Apr 28 17:00:24 symfony [err] {sfError404Exception} Action "viewAdverts/images" does not exist.
+Apr 28 17:00:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 28 17:00:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 17:00:24 symfony [info] {sfWebDebugLogger} Configuration 8.26 ms (5)
+Apr 28 17:00:24 symfony [info] {sfWebDebugLogger} Factories 204.14 ms (1)
+Apr 28 17:00:24 symfony [info] {sfFrontWebController} Action "viewAdverts/images" does not exist
+Apr 28 17:00:24 symfony [err] {sfError404Exception} Action "viewAdverts/images" does not exist.
+Apr 28 17:00:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 28 17:00:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 17:00:24 symfony [info] {sfWebDebugLogger} Configuration 12.39 ms (5)
+Apr 28 17:00:24 symfony [info] {sfWebDebugLogger} Factories 229.68 ms (1)
+Apr 28 17:00:40 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 17:00:40 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 17:00:40 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 17:00:40 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 17:00:40 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 17:00:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /viewAdverts/adverts with parameters array (  'module' => 'viewAdverts',  'action' => 'adverts',)
+Apr 28 17:00:40 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Apr 28 17:00:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 28 17:00:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 28 17:00:40 symfony [info] {viewAdvertsActions} Call "viewAdvertsActions->executeAdverts()"
+Apr 28 17:00:40 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/viewAdverts/templates/advertsSuccess.php"
+Apr 28 17:00:40 symfony [info] {sfPHPView} Decorate content with "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 17:00:40 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 17:00:40 symfony [info] {main} Call "default->executeRightMenu()"
+Apr 28 17:00:40 symfony [info] {sfPartialView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/default/templates/_rightMenu.php"
+Apr 28 17:00:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 28 17:00:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 17:00:40 symfony [info] {sfWebDebugLogger} Configuration 15.83 ms (11)
+Apr 28 17:00:40 symfony [info] {sfWebDebugLogger} Factories 66.95 ms (1)
+Apr 28 17:00:40 symfony [info] {sfWebDebugLogger} Action "viewAdverts/adverts" 0.30 ms (1)
+Apr 28 17:00:40 symfony [info] {sfWebDebugLogger} View "Success" for "viewAdverts/adverts" 40.51 ms (1)
+Apr 28 17:00:40 symfony [info] {sfWebDebugLogger} Component "default/rightMenu" 0.04 ms (1)
+Apr 28 17:00:40 symfony [info] {sfWebDebugLogger} Partial "default/_rightMenu" 5.19 ms (1)
+Apr 28 17:00:40 symfony [info] {sfWebResponse} Send content (36694 o)
+Apr 28 17:00:40 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 17:00:40 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 17:00:40 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 17:00:40 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 17:00:40 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 17:00:40 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 17:00:40 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 17:00:40 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 17:00:40 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 17:00:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /viewAdverts/images/top.png with parameters array (  'module' => 'viewAdverts',  'action' => 'images',  'top.png' => true,)
+Apr 28 17:00:40 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 17:00:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /viewAdverts/images/logo.png with parameters array (  'module' => 'viewAdverts',  'action' => 'images',  'logo.png' => true,)
+Apr 28 17:00:41 symfony [info] {sfFrontWebController} Action "viewAdverts/images" does not exist
+Apr 28 17:00:41 symfony [err] {sfError404Exception} Action "viewAdverts/images" does not exist.
+Apr 28 17:00:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 28 17:00:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 17:00:41 symfony [info] {sfWebDebugLogger} Configuration 38.28 ms (5)
+Apr 28 17:00:41 symfony [info] {sfWebDebugLogger} Factories 131.96 ms (1)
+Apr 28 17:00:41 symfony [info] {sfFrontWebController} Action "viewAdverts/images" does not exist
+Apr 28 17:00:41 symfony [err] {sfError404Exception} Action "viewAdverts/images" does not exist.
+Apr 28 17:00:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 28 17:00:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 17:00:41 symfony [info] {sfWebDebugLogger} Configuration 88.52 ms (5)
+Apr 28 17:00:41 symfony [info] {sfWebDebugLogger} Factories 314.42 ms (1)
+Apr 28 17:00:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 17:00:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 17:00:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 17:00:44 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 17:00:44 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 17:00:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /viewAdverts/adverts with parameters array (  'module' => 'viewAdverts',  'action' => 'adverts',)
+Apr 28 17:00:44 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Apr 28 17:00:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 28 17:00:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 28 17:00:44 symfony [info] {viewAdvertsActions} Call "viewAdvertsActions->executeAdverts()"
+Apr 28 17:00:44 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/viewAdverts/templates/advertsSuccess.php"
+Apr 28 17:00:44 symfony [info] {sfPHPView} Decorate content with "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 17:00:44 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 17:00:44 symfony [info] {main} Call "default->executeRightMenu()"
+Apr 28 17:00:44 symfony [info] {sfPartialView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/default/templates/_rightMenu.php"
+Apr 28 17:00:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 28 17:00:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 17:00:44 symfony [info] {sfWebDebugLogger} Configuration 18.92 ms (11)
+Apr 28 17:00:44 symfony [info] {sfWebDebugLogger} Factories 79.62 ms (1)
+Apr 28 17:00:44 symfony [info] {sfWebDebugLogger} Action "viewAdverts/adverts" 0.33 ms (1)
+Apr 28 17:00:44 symfony [info] {sfWebDebugLogger} View "Success" for "viewAdverts/adverts" 38.82 ms (1)
+Apr 28 17:00:44 symfony [info] {sfWebDebugLogger} Component "default/rightMenu" 0.04 ms (1)
+Apr 28 17:00:44 symfony [info] {sfWebDebugLogger} Partial "default/_rightMenu" 4.20 ms (1)
+Apr 28 17:00:44 symfony [info] {sfWebResponse} Send content (36694 o)
+Apr 28 17:00:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 17:00:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 17:00:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 17:00:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 17:00:45 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 17:00:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /viewAdverts/images/logo.png with parameters array (  'module' => 'viewAdverts',  'action' => 'images',  'logo.png' => true,)
+Apr 28 17:00:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 17:00:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 17:00:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 17:00:45 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 17:00:45 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 17:00:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /viewAdverts/images/top.png with parameters array (  'module' => 'viewAdverts',  'action' => 'images',  'top.png' => true,)
+Apr 28 17:00:45 symfony [info] {sfFrontWebController} Action "viewAdverts/images" does not exist
+Apr 28 17:00:45 symfony [err] {sfError404Exception} Action "viewAdverts/images" does not exist.
+Apr 28 17:00:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 28 17:00:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 17:00:45 symfony [info] {sfWebDebugLogger} Configuration 8.41 ms (5)
+Apr 28 17:00:45 symfony [info] {sfWebDebugLogger} Factories 115.32 ms (1)
+Apr 28 17:00:45 symfony [info] {sfFrontWebController} Action "viewAdverts/images" does not exist
+Apr 28 17:00:45 symfony [err] {sfError404Exception} Action "viewAdverts/images" does not exist.
+Apr 28 17:00:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 28 17:00:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 17:00:45 symfony [info] {sfWebDebugLogger} Configuration 25.93 ms (5)
+Apr 28 17:00:45 symfony [info] {sfWebDebugLogger} Factories 351.46 ms (1)
+Apr 28 17:01:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 17:01:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 17:01:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 17:01:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 17:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 17:01:57 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /viewAdverts/adverts with parameters array (  'module' => 'viewAdverts',  'action' => 'adverts',)
+Apr 28 17:01:57 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Apr 28 17:01:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 28 17:01:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 28 17:01:57 symfony [info] {viewAdvertsActions} Call "viewAdvertsActions->executeAdverts()"
+Apr 28 17:01:57 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/viewAdverts/templates/advertsSuccess.php"
+Apr 28 17:01:57 symfony [info] {sfPHPView} Decorate content with "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 17:01:57 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 28 17:01:57 symfony [info] {main} Call "default->executeRightMenu()"
+Apr 28 17:01:57 symfony [info] {sfPartialView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/default/templates/_rightMenu.php"
+Apr 28 17:01:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 28 17:01:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 17:01:57 symfony [info] {sfWebDebugLogger} Configuration 16.68 ms (11)
+Apr 28 17:01:57 symfony [info] {sfWebDebugLogger} Factories 65.48 ms (1)
+Apr 28 17:01:57 symfony [info] {sfWebDebugLogger} Action "viewAdverts/adverts" 0.32 ms (1)
+Apr 28 17:01:57 symfony [info] {sfWebDebugLogger} View "Success" for "viewAdverts/adverts" 41.84 ms (1)
+Apr 28 17:01:57 symfony [info] {sfWebDebugLogger} Component "default/rightMenu" 0.04 ms (1)
+Apr 28 17:01:57 symfony [info] {sfWebDebugLogger} Partial "default/_rightMenu" 4.36 ms (1)
+Apr 28 17:01:57 symfony [info] {sfWebResponse} Send content (36728 o)
+Apr 28 17:01:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 17:01:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 17:01:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 17:01:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 17:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 17:01:57 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /viewAdverts/images/top.png with parameters array (  'module' => 'viewAdverts',  'action' => 'images',  'top.png' => true,)
+Apr 28 17:01:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 17:01:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 17:01:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 17:01:57 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 17:01:57 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 17:01:57 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /viewAdverts/images/logo.png with parameters array (  'module' => 'viewAdverts',  'action' => 'images',  'logo.png' => true,)
+Apr 28 17:01:57 symfony [info] {sfFrontWebController} Action "viewAdverts/images" does not exist
+Apr 28 17:01:57 symfony [err] {sfError404Exception} Action "viewAdverts/images" does not exist.
+Apr 28 17:01:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 28 17:01:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 17:01:57 symfony [info] {sfWebDebugLogger} Configuration 7.97 ms (5)
+Apr 28 17:01:57 symfony [info] {sfWebDebugLogger} Factories 123.20 ms (1)
+Apr 28 17:01:57 symfony [info] {sfFrontWebController} Action "viewAdverts/images" does not exist
+Apr 28 17:01:57 symfony [err] {sfError404Exception} Action "viewAdverts/images" does not exist.
+Apr 28 17:01:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 28 17:01:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 17:01:58 symfony [info] {sfWebDebugLogger} Configuration 12.21 ms (5)
+Apr 28 17:01:58 symfony [info] {sfWebDebugLogger} Factories 253.47 ms (1)
+Apr 28 17:01:58 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 17:01:58 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 17:01:58 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 17:01:58 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 17:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 17:01:58 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /viewAdverts/images/top.png with parameters array (  'module' => 'viewAdverts',  'action' => 'images',  'top.png' => true,)
+Apr 28 17:01:58 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 28 17:01:58 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 28 17:01:58 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 28 17:01:58 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 28 17:01:58 symfony [info] {sfFrontWebController} Action "viewAdverts/images" does not exist
+Apr 28 17:01:58 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 28 17:01:58 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /viewAdverts/images/logo.png with parameters array (  'module' => 'viewAdverts',  'action' => 'images',  'logo.png' => true,)
+Apr 28 17:01:58 symfony [err] {sfError404Exception} Action "viewAdverts/images" does not exist.
+Apr 28 17:01:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 28 17:01:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 17:01:58 symfony [info] {sfWebDebugLogger} Configuration 55.02 ms (5)
+Apr 28 17:01:58 symfony [info] {sfWebDebugLogger} Factories 85.84 ms (1)
+Apr 28 17:01:58 symfony [info] {sfFrontWebController} Action "viewAdverts/images" does not exist
+Apr 28 17:01:58 symfony [err] {sfError404Exception} Action "viewAdverts/images" does not exist.
+Apr 28 17:01:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 28 17:01:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 28 17:01:58 symfony [info] {sfWebDebugLogger} Configuration 8.27 ms (5)
+Apr 28 17:01:58 symfony [info] {sfWebDebugLogger} Factories 191.05 ms (1)
+Apr 29 20:47:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 20:47:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 20:47:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 29 20:47:37 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 29 20:47:37 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 29 20:47:37 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Apr 29 20:47:37 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Apr 29 20:47:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 20:47:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 20:47:37 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Apr 29 20:47:37 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/default/templates/indexSuccess.php"
+Apr 29 20:47:37 symfony [info] {sfPHPView} Decorate content with "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 29 20:47:37 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 29 20:47:37 symfony [info] {main} Call "sfGuardAuth->executeSignin_form()"
+Apr 29 20:47:37 symfony [info] {sfPartialView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/sfGuardAuth/templates/_signin_form.php"
+Apr 29 20:47:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 20:47:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 20:47:37 symfony [info] {sfWebDebugLogger} Configuration 422.43 ms (12)
+Apr 29 20:47:37 symfony [info] {sfWebDebugLogger} Factories 621.06 ms (1)
+Apr 29 20:47:37 symfony [info] {sfWebDebugLogger} Action "default/index" 0.40 ms (1)
+Apr 29 20:47:37 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 280.63 ms (1)
+Apr 29 20:47:37 symfony [info] {sfWebDebugLogger} Component "sfGuardAuth/signin_form" 80.09 ms (1)
+Apr 29 20:47:37 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 28.99 ms (1)
+Apr 29 20:47:37 symfony [info] {sfWebResponse} Send content (37830 o)
+Apr 29 20:47:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 20:47:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 20:47:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 29 20:47:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 29 20:47:52 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 29 20:47:52 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Apr 29 20:47:52 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Apr 29 20:47:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 20:47:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 20:47:52 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Apr 29 20:47:52 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 20:47:52 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.username = ? AND s.is_active = ?) - (admin, 1)
+Apr 29 20:47:52 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/sfGuardAuth/templates/signinSuccess.php"
+Apr 29 20:47:52 symfony [info] {sfPartialView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/sfGuardAuth/templates/_signin_form.php"
+Apr 29 20:47:52 symfony [info] {sfPHPView} Decorate content with "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 29 20:47:52 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 29 20:47:52 symfony [info] {main} Call "sfGuardAuth->executeSignin_form()"
+Apr 29 20:47:52 symfony [info] {sfPartialView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/sfGuardAuth/templates/_signin_form.php"
+Apr 29 20:47:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 20:47:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 20:47:52 symfony [info] {sfWebDebugLogger} Configuration 90.67 ms (12)
+Apr 29 20:47:52 symfony [info] {sfWebDebugLogger} Factories 73.92 ms (1)
+Apr 29 20:47:52 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 142.08 ms (1)
+Apr 29 20:47:52 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.06 ms (2)
+Apr 29 20:47:52 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 63.15 ms (1)
+Apr 29 20:47:52 symfony [info] {sfWebDebugLogger} Partial "sfGuardAuth/_signin_form" 13.69 ms (2)
+Apr 29 20:47:52 symfony [info] {sfWebDebugLogger} Component "sfGuardAuth/signin_form" 2.52 ms (1)
+Apr 29 20:47:52 symfony [info] {sfWebResponse} Send content (47997 o)
+Apr 29 20:47:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 20:47:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 20:47:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 29 20:47:52 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 29 20:47:52 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 29 20:47:52 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/images/logo.png" (/).
+Apr 29 20:47:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 29 20:47:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 20:47:52 symfony [info] {sfWebDebugLogger} Configuration 11.27 ms (5)
+Apr 29 20:47:52 symfony [info] {sfWebDebugLogger} Factories 86.56 ms (1)
+Apr 29 20:47:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 20:47:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 20:47:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 29 20:47:53 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 29 20:47:53 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 29 20:47:53 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/images/top.png" (/).
+Apr 29 20:47:53 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 29 20:47:53 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 20:47:53 symfony [info] {sfWebDebugLogger} Configuration 8.40 ms (5)
+Apr 29 20:47:53 symfony [info] {sfWebDebugLogger} Factories 71.33 ms (1)
+Apr 29 20:48:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 20:48:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 20:48:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 29 20:48:24 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 29 20:48:24 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 29 20:48:24 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Apr 29 20:48:24 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Apr 29 20:48:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 20:48:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 20:48:24 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Apr 29 20:48:25 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Apr 29 20:48:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.username = ? AND s.is_active = ?) - (admin, 1)
+Apr 29 20:48:25 symfony [info] {myUser} User is authenticated
+Apr 29 20:48:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_user_permission s2 ON s.id = s2.permission_id WHERE (s2.user_id IN (?)) - (1)
+Apr 29 20:48:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.group_id AS s2__group_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_group s LEFT JOIN sf_guard_user_group s2 ON s.id = s2.group_id WHERE (s2.user_id IN (?)) - (1)
+Apr 29 20:48:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.group_id AS s2__group_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_group_permission s2 ON s.id = s2.permission_id WHERE (s2.group_id IN (?)) - (1)
+Apr 29 20:48:25 symfony [info] {myUser} Add credential(s) "admin"
+Apr 29 20:48:25 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE sf_guard_user SET last_login = ?, updated_at = ? WHERE id = ? - (2013-04-29 20:48:25, 2013-04-29 20:48:25, 1)
+Apr 29 20:48:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (1)
+Apr 29 20:48:25 symfony [info] {sfFrontWebController} Redirect to "http://voyage.localhost/frontend_dev.php/login"
+Apr 29 20:48:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Apr 29 20:48:25 symfony [info] {sfWebResponse} Send header "Location: http://voyage.localhost/frontend_dev.php/login"
+Apr 29 20:48:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 20:48:25 symfony [info] {sfWebDebugLogger} Configuration 31.31 ms (8)
+Apr 29 20:48:25 symfony [info] {sfWebDebugLogger} Factories 96.28 ms (1)
+Apr 29 20:48:25 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 308.55 ms (1)
+Apr 29 20:48:25 symfony [info] {sfWebDebugLogger} Database (Doctrine) 4.76 ms (7)
+Apr 29 20:48:25 symfony [info] {sfWebResponse} Send content (117 o)
+Apr 29 20:48:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 20:48:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 20:48:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 29 20:48:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 29 20:48:25 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 29 20:48:25 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/login) for /login with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Apr 29 20:48:25 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Apr 29 20:48:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 20:48:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 20:48:25 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Apr 29 20:48:25 symfony [info] {sfFrontWebController} Redirect to "http://voyage.localhost/frontend_dev.php/"
+Apr 29 20:48:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Apr 29 20:48:25 symfony [info] {sfWebResponse} Send header "Location: http://voyage.localhost/frontend_dev.php/"
+Apr 29 20:48:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 20:48:25 symfony [info] {sfWebDebugLogger} Configuration 30.74 ms (8)
+Apr 29 20:48:25 symfony [info] {sfWebDebugLogger} Factories 87.63 ms (1)
+Apr 29 20:48:25 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 1.92 ms (1)
+Apr 29 20:48:25 symfony [info] {sfWebResponse} Send content (112 o)
+Apr 29 20:48:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 20:48:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 20:48:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 29 20:48:25 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 29 20:48:25 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 29 20:48:25 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Apr 29 20:48:25 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Apr 29 20:48:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 20:48:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 20:48:25 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Apr 29 20:48:25 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/default/templates/indexSuccess.php"
+Apr 29 20:48:25 symfony [info] {sfPHPView} Decorate content with "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 29 20:48:25 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 29 20:48:25 symfony [info] {main} Call "default->executeRightMenu()"
+Apr 29 20:48:25 symfony [info] {sfPartialView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/default/templates/_rightMenu.php"
+Apr 29 20:48:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 20:48:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 20:48:25 symfony [info] {sfWebDebugLogger} Configuration 38.27 ms (11)
+Apr 29 20:48:25 symfony [info] {sfWebDebugLogger} Factories 84.33 ms (1)
+Apr 29 20:48:25 symfony [info] {sfWebDebugLogger} Action "default/index" 0.31 ms (1)
+Apr 29 20:48:25 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 58.05 ms (1)
+Apr 29 20:48:25 symfony [info] {sfWebDebugLogger} Component "default/rightMenu" 0.04 ms (1)
+Apr 29 20:48:25 symfony [info] {sfWebDebugLogger} Partial "default/_rightMenu" 5.20 ms (1)
+Apr 29 20:48:25 symfony [info] {sfWebResponse} Send content (36178 o)
+Apr 29 20:48:26 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 20:48:26 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 20:48:26 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 29 20:48:26 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 29 20:48:26 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 29 20:48:26 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 20:48:26 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 20:48:26 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 29 20:48:26 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 29 20:48:26 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/images/top.png" (/).
+Apr 29 20:48:26 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 29 20:48:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 29 20:48:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 20:48:26 symfony [info] {sfWebDebugLogger} Configuration 30.50 ms (5)
+Apr 29 20:48:26 symfony [info] {sfWebDebugLogger} Factories 69.51 ms (1)
+Apr 29 20:48:26 symfony [err] {sfError404Exception} Empty module and/or action after parsing the URL "/images/logo.png" (/).
+Apr 29 20:48:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 29 20:48:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 20:48:26 symfony [info] {sfWebDebugLogger} Configuration 53.79 ms (5)
+Apr 29 20:48:26 symfony [info] {sfWebDebugLogger} Factories 199.60 ms (1)
+Apr 29 20:48:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 20:48:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 20:48:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 29 20:48:32 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 29 20:48:32 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 29 20:48:32 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /travelRoute/addAdvert with parameters array (  'module' => 'travelRoute',  'action' => 'addAdvert',)
+Apr 29 20:48:33 symfony [info] {sfFilterChain} Executing filter "sfGuardRememberMeFilter"
+Apr 29 20:48:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Apr 29 20:48:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Apr 29 20:48:33 symfony [info] {travelRouteActions} Call "travelRouteActions->executeAddAdvert()"
+Apr 29 20:48:33 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/travelRoute/templates/addAdvertSuccess.php"
+Apr 29 20:48:33 symfony [info] {sfPHPView} Decorate content with "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 29 20:48:33 symfony [info] {sfPHPView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\templates/layout.php"
+Apr 29 20:48:33 symfony [info] {main} Call "default->executeRightMenu()"
+Apr 29 20:48:33 symfony [info] {sfPartialView} Render "D:\workspace\voyage-extern\lia_voyage\apps\frontend\modules/default/templates/_rightMenu.php"
+Apr 29 20:48:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Apr 29 20:48:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 20:48:33 symfony [info] {sfWebDebugLogger} Configuration 102.81 ms (12)
+Apr 29 20:48:33 symfony [info] {sfWebDebugLogger} Factories 65.85 ms (1)
+Apr 29 20:48:33 symfony [info] {sfWebDebugLogger} Action "travelRoute/addAdvert" 0.33 ms (1)
+Apr 29 20:48:33 symfony [info] {sfWebDebugLogger} View "Success" for "travelRoute/addAdvert" 49.98 ms (1)
+Apr 29 20:48:33 symfony [info] {sfWebDebugLogger} Component "default/rightMenu" 0.04 ms (1)
+Apr 29 20:48:33 symfony [info] {sfWebDebugLogger} Partial "default/_rightMenu" 3.97 ms (1)
+Apr 29 20:48:33 symfony [info] {sfWebResponse} Send content (41434 o)
+Apr 29 20:48:33 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 20:48:33 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 20:48:33 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 29 20:48:33 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 29 20:48:33 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 29 20:48:33 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /travelRoute/images/logo.png with parameters array (  'module' => 'travelRoute',  'action' => 'images',  'logo.png' => true,)
+Apr 29 20:48:33 symfony [info] {sfFrontWebController} Action "travelRoute/images" does not exist
+Apr 29 20:48:33 symfony [err] {sfError404Exception} Action "travelRoute/images" does not exist.
+Apr 29 20:48:33 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signin" (/guard/login)
+Apr 29 20:48:33 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_signout" (/guard/logout)
+Apr 29 20:48:33 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_register" (/guard/register)
+Apr 29 20:48:33 symfony [info] {sfPatternRouting} Connect sfRoute "sf_guard_forgot_password" (/guard/forgot_password)
+Apr 29 20:48:33 symfony [info] {sfPatternRouting} Connect sfDoctrineRoute "sf_guard_forgot_password_change" (/guard/forgot_password/:unique_key)
+Apr 29 20:48:33 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /travelRoute/images/top.png with parameters array (  'module' => 'travelRoute',  'action' => 'images',  'top.png' => true,)
+Apr 29 20:48:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 29 20:48:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 20:48:33 symfony [info] {sfWebDebugLogger} Configuration 8.05 ms (5)
+Apr 29 20:48:33 symfony [info] {sfWebDebugLogger} Factories 94.51 ms (1)
+Apr 29 20:48:33 symfony [info] {sfFrontWebController} Action "travelRoute/images" does not exist
+Apr 29 20:48:33 symfony [err] {sfError404Exception} Action "travelRoute/images" does not exist.
+Apr 29 20:48:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Apr 29 20:48:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Apr 29 20:48:33 symfony [info] {sfWebDebugLogger} Configuration 8.28 ms (5)
+Apr 29 20:48:33 symfony [info] {sfWebDebugLogger} Factories 192.92 ms (1)

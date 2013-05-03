@@ -1,0 +1,14 @@
+Direction:
+  Direction_1:
+    name: 'O singur? direc?ie'
+  Direction_2:
+    name: 'Regulat?'
+  Direction_3:
+    name: 'Dus - Întors'
+TypeRoute:
+  TypeRoute_1:
+    name: Unic
+  TypeRoute_2:
+    name: Regulat
+  TypeRoute_3:
+    name: 'Domiciliu - Serviciu'

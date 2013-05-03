@@ -19,4 +19,9 @@ class viewAdvertsActions extends sfActions
   {
     $this->forward('default', 'module');
   }
+  
+  public function executeAdverts(sfWebRequest $request)
+  {
+    
+  }
 }
