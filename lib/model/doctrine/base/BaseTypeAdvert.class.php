@@ -1,4 +1,6 @@
 <?php
+// Connection Component Binding
+Doctrine_Manager::getInstance()->bindComponent('TypeAdvert', 'doctrine');
 
 /**
  * BaseTypeAdvert
@@ -7,14 +9,11 @@
  * 
  * @property integer $id
  * @property string $name
- * @property Doctrine_Collection $typeAdvert
  * 
- * @method integer             getId()         Returns the current record's "id" value
- * @method string              getName()       Returns the current record's "name" value
- * @method Doctrine_Collection getTypeAdvert() Returns the current record's "typeAdvert" collection
- * @method TypeAdvert          setId()         Sets the current record's "id" value
- * @method TypeAdvert          setName()       Sets the current record's "name" value
- * @method TypeAdvert          setTypeAdvert() Sets the current record's "typeAdvert" collection
+ * @method integer    getId()   Returns the current record's "id" value
+ * @method string     getName() Returns the current record's "name" value
+ * @method TypeAdvert setId()   Sets the current record's "id" value
+ * @method TypeAdvert setName() Sets the current record's "name" value
  * 
  * @package    voyage
  * @subpackage model
@@ -26,19 +25,21 @@ abstract class BaseTypeAdvert extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('type_advert');
-        $this->hasColumn('id', 'integer', 11, array(
+        $this->hasColumn('id', 'integer', 8, array(
              'type' => 'integer',
-             'unique' => true,
-             'autoincrement' => true,
+             'fixed' => 0,
+             'unsigned' => false,
              'primary' => true,
-             'length' => 11,
+             'autoincrement' => true,
+             'length' => 8,
              ));
         $this->hasColumn('name', 'string', 255, array(
              'type' => 'string',
-             'unique' => false,
-             'autoincrement' => false,
+             'fixed' => 0,
+             'unsigned' => false,
              'primary' => false,
              'notnull' => true,
+             'autoincrement' => false,
              'length' => 255,
              ));
     }
@@ -46,8 +47,6 @@ abstract class BaseTypeAdvert extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasMany('Advert as typeAdvert', array(
-             'local' => 'type_id',
-             'foreign' => 'id'));
+        
     }
 }

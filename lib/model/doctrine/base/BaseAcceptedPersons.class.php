@@ -1,4 +1,6 @@
 <?php
+// Connection Component Binding
+Doctrine_Manager::getInstance()->bindComponent('AcceptedPersons', 'doctrine');
 
 /**
  * BaseAcceptedPersons
@@ -8,16 +10,19 @@
  * @property integer $id
  * @property integer $avdert_id
  * @property integer $user_id
- * @property Advert $Advert
+ * @property timestamp $created_at
+ * @property timestamp $updated_at
  * 
- * @method integer         getId()        Returns the current record's "id" value
- * @method integer         getAvdertId()  Returns the current record's "avdert_id" value
- * @method integer         getUserId()    Returns the current record's "user_id" value
- * @method Advert          getAdvert()    Returns the current record's "Advert" value
- * @method AcceptedPersons setId()        Sets the current record's "id" value
- * @method AcceptedPersons setAvdertId()  Sets the current record's "avdert_id" value
- * @method AcceptedPersons setUserId()    Sets the current record's "user_id" value
- * @method AcceptedPersons setAdvert()    Sets the current record's "Advert" value
+ * @method integer         getId()         Returns the current record's "id" value
+ * @method integer         getAvdertId()   Returns the current record's "avdert_id" value
+ * @method integer         getUserId()     Returns the current record's "user_id" value
+ * @method timestamp       getCreatedAt()  Returns the current record's "created_at" value
+ * @method timestamp       getUpdatedAt()  Returns the current record's "updated_at" value
+ * @method AcceptedPersons setId()         Sets the current record's "id" value
+ * @method AcceptedPersons setAvdertId()   Sets the current record's "avdert_id" value
+ * @method AcceptedPersons setUserId()     Sets the current record's "user_id" value
+ * @method AcceptedPersons setCreatedAt()  Sets the current record's "created_at" value
+ * @method AcceptedPersons setUpdatedAt()  Sets the current record's "updated_at" value
  * 
  * @package    voyage
  * @subpackage model
@@ -29,40 +34,55 @@ abstract class BaseAcceptedPersons extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('accepted_persons');
-        $this->hasColumn('id', 'integer', 11, array(
+        $this->hasColumn('id', 'integer', 8, array(
              'type' => 'integer',
-             'unique' => true,
-             'autoincrement' => true,
+             'fixed' => 0,
+             'unsigned' => false,
              'primary' => true,
-             'length' => 11,
+             'autoincrement' => true,
+             'length' => 8,
              ));
-        $this->hasColumn('avdert_id', 'integer', 11, array(
+        $this->hasColumn('avdert_id', 'integer', 8, array(
              'type' => 'integer',
-             'unique' => false,
-             'autoincrement' => false,
+             'fixed' => 0,
+             'unsigned' => false,
              'primary' => false,
              'notnull' => true,
-             'length' => 11,
-             ));
-        $this->hasColumn('user_id', 'integer', 11, array(
-             'type' => 'integer',
-             'unique' => false,
              'autoincrement' => false,
+             'length' => 8,
+             ));
+        $this->hasColumn('user_id', 'integer', 8, array(
+             'type' => 'integer',
+             'fixed' => 0,
+             'unsigned' => false,
              'primary' => false,
              'notnull' => true,
-             'length' => 11,
+             'autoincrement' => false,
+             'length' => 8,
+             ));
+        $this->hasColumn('created_at', 'timestamp', 25, array(
+             'type' => 'timestamp',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             'length' => 25,
+             ));
+        $this->hasColumn('updated_at', 'timestamp', 25, array(
+             'type' => 'timestamp',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             'length' => 25,
              ));
     }
 
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('Advert', array(
-             'local' => 'id',
-             'foreign' => 'advert_id'));
-
-        $timestampable0 = new Doctrine_Template_Timestampable(array(
-             ));
-        $this->actAs($timestampable0);
+        
     }
 }

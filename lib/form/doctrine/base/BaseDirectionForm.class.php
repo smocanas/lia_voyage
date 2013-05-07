@@ -24,10 +24,6 @@ abstract class BaseDirectionForm extends BaseFormDoctrine
       'name' => new sfValidatorString(array('max_length' => 255)),
     ));
 
-    $this->validatorSchema->setPostValidator(
-      new sfValidatorDoctrineUnique(array('model' => 'Direction', 'column' => array('id')))
-    );
-
     $this->widgetSchema->setNameFormat('direction[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);

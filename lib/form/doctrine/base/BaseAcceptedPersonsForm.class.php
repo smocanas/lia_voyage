@@ -30,10 +30,6 @@ abstract class BaseAcceptedPersonsForm extends BaseFormDoctrine
       'updated_at' => new sfValidatorDateTime(),
     ));
 
-    $this->validatorSchema->setPostValidator(
-      new sfValidatorDoctrineUnique(array('model' => 'AcceptedPersons', 'column' => array('id')))
-    );
-
     $this->widgetSchema->setNameFormat('accepted_persons[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);

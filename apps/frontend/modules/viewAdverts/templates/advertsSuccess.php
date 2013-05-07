@@ -1,25 +1,27 @@
-<!--<table border="1">
-    <tr>
-    <table>
-        <tr>
-            <td>
-                <input type="date"/>
-            </td>
-            <td>
-
-            </td>
-        </tr>
-    </table>
-</tr>
-</table>-->
 <div class="advertList">
     <?php if ($advertCount) :?>
         <?php foreach ($adverts as $advert): ?>
-            <div class="advertItem" advertId ="<?php echo $advert->getId(); ?>">
-                <?php echo $advert->getStartLocation() . ' - ' . $advert->getEndLocation(); ?>
-            </div>
+        <h3>
+            <?php echo $advert->getStartLocation() . ' - ' . $advert->getEndLocation(); ?>
+        </h3>
+        <div>
+            <p>
+                <b>Traseu : </b> <?php echo $advert->getTypeRouteId(); ?> 
+            </p>
+            <p>
+                <b>Nr. persoane : </b> <?php echo $advert->getPNumber(); ?>
+            </p>
+            <p>
+                <b>Comentariu : </b> <?php echo $advert->getComment(); ?>
+            </p>
+        </div>
         <?php endforeach;?>
     <?php else: ?>
         <div>Nu exista nici un rezultat</div>
     <?php endif; ?>
 </div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".advertList").accordion();
+    });
+</script>

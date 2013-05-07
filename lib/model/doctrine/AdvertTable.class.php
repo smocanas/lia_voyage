@@ -19,17 +19,18 @@ class AdvertTable extends Doctrine_Table
     
     public static function addAdvert($advert = array(), $type = 1)
     {
-        $route           = ($advert['route']) ? $advert['route'] : false;
-        $direction       = ($advert['direction']) ? $advert['direction'] : false;
-        $nb_places       = ($advert['nb_places']) ? $advert['nb_places'] : false;
-        $departure_date  = ($advert['departure_date']) ? $advert['departure_date'] : false;
-        $return_date     = ($advert['return_date']) ? $advert['return_date'] : false;
-        $departure_place = ($advert['departure_place']) ? $advert['departure_place'] : false;
-        $time            = ($advert['time']) ? $advert['time'] : false;
-        $destination     = ($advert['destination']) ? $advert['destination'] : false;
-        $comment         = ($advert['comment']) ? $advert['comment'] : false;
-        
-        $date = $departure_date . ' ' . $time;
+        $route           = $advert['route']?$advert['route']:false;
+        $direction       = $advert['direction']?$advert['direction']:false;
+        $nb_places       = $advert['nb_places']?$advert['nb_places']:false;
+        $departure_date  = $advert['departure_date']?$advert['departure_date']:false;
+        $return_date     = $advert['return_date']?$advert['return_date']:false;
+        $departure_place = $advert['departure_place']?$advert['departure_place']:false;
+        $time            = $advert['time']?$advert['time']:false;
+        $destination     = $advert['destination']?$advert['destination']:false;
+        $comment         = $advert['comment']?$advert['comment']:false;
+        $departure_date = explode('/', $departure_date);
+        $departure_date = $departure_date[2] . '-' . $departure_date[0] . '-' . $departure_date[1];
+        $date = $departure_date . ' ' . $time . ':00';
         $obj = new Advert();
         $obj->setTypeId($type);
         if ($route)

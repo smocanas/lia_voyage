@@ -39,14 +39,10 @@ abstract class BaseAdvertForm extends BaseFormDoctrine
       'middle_location' => new sfValidatorString(array('max_length' => 255)),
       'time'            => new sfValidatorDateTime(),
       'p_number'        => new sfValidatorInteger(),
-      'comment'         => new sfValidatorString(array('max_length' => 512)),
+      'comment'         => new sfValidatorString(),
       'created_at'      => new sfValidatorDateTime(),
       'updated_at'      => new sfValidatorDateTime(),
     ));
-
-    $this->validatorSchema->setPostValidator(
-      new sfValidatorDoctrineUnique(array('model' => 'Advert', 'column' => array('id')))
-    );
 
     $this->widgetSchema->setNameFormat('advert[%s]');
 

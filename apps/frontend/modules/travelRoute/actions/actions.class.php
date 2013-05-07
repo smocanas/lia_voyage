@@ -28,12 +28,13 @@ class travelRouteActions extends sfActions {
         //pe viitor datele formularului pentru update
     }
 
-    public function addAdvertQuery(sfWebRequest $request) {
+    public function executeAddAdvertQuery(sfWebRequest $request) {
         try {
-            $advert = $request->getParameter('advert');
+            $advert = $request->getPostParameter('advert');
 
             AdvertTable::addAdvert($advert);
             
+            $this->forward('viewAdverts', 'adverts');
             return sfView::NONE;
         } catch (Exception $e) {
             $message = $e->getMessage();

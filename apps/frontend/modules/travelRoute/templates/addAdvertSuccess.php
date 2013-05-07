@@ -6,7 +6,7 @@ $path = $_SERVER['SERVER_NAME'];
               size: 20px;
     }
 </style>
-<form name="advert" action="<?php echo url_for('travelRoute/addAdvertQuery'); ?>" method="get">
+<form name="advert" action="<?php echo url_for('travelRoute/addAdvertQuery'); ?>" method="POST">
     <fieldset class="fieldsetStyle">
         <legend class="legendstyle">Introduce-ți informația</legend>
         <!-- Traseu-->
@@ -24,7 +24,7 @@ $path = $_SERVER['SERVER_NAME'];
                         }
                         $iteration++;
                         ?>
-                        <div><input type="radio" name="advert['route']" value="<?php echo $option->id;?>" <?php echo $checked;?>><?php echo $option->name; ?></div>
+                        <div><input type="radio" name="advert[route]" value="<?php echo $option->id;?>" <?php echo $checked;?>><?php echo $option->name; ?></div>
                     <?php endforeach;?>
                 </td>
             </tr>
@@ -45,7 +45,7 @@ $path = $_SERVER['SERVER_NAME'];
                         }
                         $iteration++;
                         ?>
-                        <div><input type="radio" name="advert['direction']" value="<?php echo $direction->id; ?>" <?php echo $checked; ?>><?php echo $direction->name; ?></div>
+                        <div><input type="radio" name="advert[direction]" value="<?php echo $direction->id; ?>" <?php echo $checked; ?>><?php echo $direction->name; ?></div>
                     <?php endforeach; ?>
                 </td>
             </tr>
@@ -58,7 +58,7 @@ $path = $_SERVER['SERVER_NAME'];
                     Numarul de locuri:<span class="required">*</span>
                 </td>
                 <td>
-                    <input type="text" name="advert['nb_places']" class='nr_locuri'>
+                    <input type="text" name="advert[nb_places]" class='nr_locuri'>
                 </td>
             </tr>
             <tr>
@@ -68,8 +68,8 @@ $path = $_SERVER['SERVER_NAME'];
             <tr>
                 <td>Data plecării:<span class="required">*</span></td>
                 <td valign="top">
-                    <input type="text" name="advert['departure_date']" value="Data plecării"   class="datepicker italic_p d_p"/>
-                    <input type="text" name="advert['return_date']" value="Data întoarcerii" class="datepicker italic_i d_i"/>
+                    <input type="text" name="advert[departure_date]" value="Data plecării"   class="datepicker italic_p d_p"/>
+                    <input type="text" name="advert[return_date]" value="Data întoarcerii" class="datepicker italic_i d_i"/>
                 </td>
             </tr>
             <tr>
@@ -80,13 +80,13 @@ $path = $_SERVER['SERVER_NAME'];
                 <td>Locul de plecare:<span class="required">*</span> 
                 </td>
                 <td>
-                    <input type="text" name="advert['departure_place']" autocomplete="on"/>
+                    <input type="text" name="advert[departure_place]" autocomplete="on"/>
                     
                 </td>
             </tr>
             <tr>
                 <td>Ora:<span class="required">*</span></td>
-                <td><input type="text" name="advert['time']" class="timepicker"/> </td>
+                <td><input type="text" name="advert[time]" class="timepicker"/> </td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
@@ -95,13 +95,13 @@ $path = $_SERVER['SERVER_NAME'];
             <tr> 
                 <td>Destinație:<span class="required">*</span>
                 </td>
-                <td><input type="text" name="advert['destination']" autocomplete="on"/>
+                <td><input type="text" name="advert[destination]" autocomplete="on"/>
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
                     Comentariu: <br />
-                    <textarea name="advert['comment']" id="comment" class="comment" cols="70"></textarea>
+                    <textarea name="advert[comment]" id="comment" class="comment" cols="70"></textarea>
                 </td>
             </tr>
             <tr>
