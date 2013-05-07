@@ -22,6 +22,17 @@ class viewAdvertsActions extends sfActions
   
   public function executeAdverts(sfWebRequest $request)
   {
+      try
+      {
+          $this->adverts = AdvertTable::getInstance()->findAll();
+          $this->advertCount = count($this->adverts);
+          $this->status = 'success';
+      }
+      catch (Exception $e)
+      {
+          $this->status = 'error';
+          $this->message = $e->getMessage();
+      }
     
   }
 }
