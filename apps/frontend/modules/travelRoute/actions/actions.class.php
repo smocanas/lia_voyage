@@ -25,20 +25,25 @@ class travelRouteActions extends sfActions {
     }
 
     public function executeAddPasager(sfWebRequest $request) {
-        //pe viitor datele formularului pentru update
+        $this->routesOptions = TypeRouteTable::getInstance()->findAll();
+        $this->directions    = DirectionTable::getInstance()->findAll();
     }
 
     public function executeAddAdvertQuery(sfWebRequest $request) {
-        try {
-            $advert = $request->getPostParameter('advert');
+        $advert = $request->getPostParameter('advert');
 
-            AdvertTable::addAdvert($advert);
-            
-            $this->forward('viewAdverts', 'adverts');
-            return sfView::NONE;
-        } catch (Exception $e) {
-            $message = $e->getMessage();
-        }
+        AdvertTable::addAdvert($advert);
+
+        $this->forward('viewAdverts', 'adverts');
+    }
+    
+    public function executeAddAdvertPasagerQuery(sfWebRequest $request)
+    {
+        $advert = $request->getPostParameter('advert');
+
+        AdvertTable::addAdvert($advert, 2);
+
+        $this->forward('viewAdverts', 'adverts');
     }
 
 }

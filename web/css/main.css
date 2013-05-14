@@ -1222,6 +1222,36 @@ ul.pagenav li.pagenav-next {
     float: left;
 }
 
-.blockPositionRight{
+.blockPositionRight {
     float: right;
+}
+
+.greenColor {
+    color: green !important;
+}
+
+.redColor {
+    color: red !important;
+}
+
+.search {
+    height: 32px;
+    width: 158px;
+    border: none;
+    margin-top: 5px;
+    margin-left: 1px;
+}
+
+.pageTitle{
+    font-size: 22px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.advancedSearchBlock{
+    float: left;
+    margin-right: 17px;
+    margin-top: 17px;
+    overflow: hidden;
+    position: relative;
 }

@@ -8,21 +8,24 @@
         <?php include_stylesheets() ?>
         <?php include_javascripts() ?>
         <?php
-        
-            $imagesPath = sfConfig::get('sf_web_dir');
+        $imagesPath = sfConfig::get('sf_web_dir');
         ?>
     </head>
     <body>
-        
+
         <div id="header">	    
             <div class="pagewidth">		    
-                <div id="header-top">		        
-                    <div id="sitename">                    			        
-                        <a href="index.php"><img src="images/logo.png" width="534" height="47" alt="logotype" /></a>                			   
-                    </div>				
-                    <div id="search">				    
-<!--                        <input type="textfield" name="search" value="" class="search" id="search">  				-->
-                    </div>            
+                <div id="header-top">
+                    <table border="0">
+                        <tr>
+                            <td id="sitename">
+                                <a href="index.php"><img src="../images/logo.png" width="534" height="47" alt="logotype" /></a>
+                            </td>
+                            <td class="searchBlock">
+                                <?php include_component('search', 'searchForm'); ?>
+                            </td>
+                        </tr>
+                    </table>
                 </div>            
                 <div id="header-bottom">			    
                     <div id="topmenu">			        
@@ -41,12 +44,12 @@
             </div>
             <div id="right">
                 <div class="right-menu">
-                    <?php if(!$sf_user->isAuthenticated()):?>
+                    <?php if (!$sf_user->isAuthenticated()): ?>
                         <?php include_component('sfGuardAuth', 'signin_form'); ?>
                     <?php endif; ?>
                 </div>
                 <div class="right-menu">
-                    <?php if($sf_user->isAuthenticated()):?>
+                    <?php if ($sf_user->isAuthenticated()): ?>
                         <?php include_component('default', 'rightMenu'); ?>
                     <?php endif; ?>
                 </div>
@@ -59,7 +62,8 @@
                 </div>
                 <div id="top">
                     <div class="top_button">
-                        <a href="#" onclick="scrollToTop();return false;">
+                        <a href="#" onclick="scrollToTop();
+                                return false;">
                             <img src="images/top.png" width="30" height="30" alt="top" />
                         </a>
                     </div>

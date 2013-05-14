@@ -70,4 +70,83 @@ class AdvertTable extends Doctrine_Table
         
         $obj->save();
     }
+    
+    public static function search($word)
+    {
+        $query = Doctrine_Query::create()
+                ->select('*')
+                ->from('Advert a')
+                ->where('a.start_location LIKE "%' . $word . '%"')
+                ->orWhere('a.end_location LIKE "%' . $word . '%"')
+                ->orWhere('a.middle_location LIKE "%' . $word . '%"')
+                ->execute();
+        
+        return $query;
+    }
+    
+    public static function advancedSearch($params)
+    {
+        $q = Doctrine_Manager::getInstance()->getCurrentConnection();
+        
+        $query = '
+            SELECT * FROM advert a
+            WHERE 1
+        ';
+        if ($params['route'])
+        {
+            $query .= ' AND a.type_route_id=' . $params['route'];
+        }
+        
+        if ($params['direction'])
+        {
+            $query .= ' AND a.direction_id=' . $params['direction'];
+        }
+        
+        if ($params['nb_places'])
+        {
+            $query .= ' AND a.p_number=' . $params['nb_places'];
+        }
+        
+        if ($params['departure_date'])
+        {
+            $isValide = false;
+            if(preg_match('/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/', $params['departure_date'])){
+                $isValide = true;
+            }
+            if ($isValide == true)
+            {
+                $departure_date = explode('/', $params['departure_date']);
+                $time = $params['time'];
+                $departure_date = $departure_date[2] . '-' . $departure_date[0] . '-' . $departure_date[1];
+                $date = $departure_date . ' ' . $time . ':00';
+                $query .= ' AND a.time="' . $date . '"';
+            }
+        }
+        
+        if ($params['departure_place'])
+        {
+            $query .= ' AND a.start_location="' . $params['departure_place'] . '"';
+        }
+        
+        if ($params['destination'])
+        {
+            $query .= ' AND a.end_location="' . $params['destination'] . '"';
+        }
+        
+        
+        $results = $q->execute($query)->fetchAll();
+        $objArray = array();
+        foreach ($results as $key => $values)
+        {
+            $obj = new stdClass();
+            foreach ($values as $item => $value)
+            {
+                $obj->$item = $value;
+            }
+            $objArray[$key] = $obj;
+            unset($obj);
+        }
+        
+        return $objArray;
+    }
 }

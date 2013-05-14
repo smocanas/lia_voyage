@@ -12,9 +12,9 @@ default:
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [main.css, pepper-grinder/jquery-ui-1.10.2.custom.min.css, jquery.ui.timepicker.css]
+  stylesheets:    [main.css, pepper-grinder/jquery-ui-1.10.2.custom.min.css, jquery.ui.timepicker.css, search.css]
 
-  javascripts:    [jquery-1.9.1.js, jquery-ui-1.10.2.custom.min.js, jquery.ui.timepicker.js]
+  javascripts:    [jquery-1.9.1.js, jquery-ui-1.10.2.custom.min.js, jquery.ui.timepicker.js, search_jsinput.js]
 
   has_layout:     true
   layout:         layout

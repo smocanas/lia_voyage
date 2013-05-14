@@ -93,9 +93,11 @@ $path = $_SERVER['SERVER_NAME'];
                 <td>&nbsp;</td>
             </tr>
             <tr> 
-                <td>Destinație:<span class="required">*</span>
+                <td>
+                    Destinație:<span class="required">*</span>
                 </td>
-                <td><input type="text" name="advert[destination]" autocomplete="on"/>
+                <td>
+                    <input type="text" name="advert[destination]" autocomplete="on"/>
                 </td>
             </tr>
             <tr>
