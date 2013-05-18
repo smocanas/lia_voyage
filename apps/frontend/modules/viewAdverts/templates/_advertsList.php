@@ -11,7 +11,7 @@
         </h3>
         <div>
             <p>
-                <b>Traseu : </b> <?php echo $advert->getTypeRouteId(); ?> 
+                <b>Traseu : </b> <?php echo $advert->getTypeRouteName(); ?> 
             </p>
             <p>
                 <b>Nr. persoane : </b> <?php echo $advert->getPNumber(); ?>

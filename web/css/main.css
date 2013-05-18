@@ -488,6 +488,7 @@ label{
 }
 
 /* The Nivo Slider styles */
+/*
 .nivoSlider {
     float:left;
     position:relative;
@@ -502,8 +503,8 @@ label{
     top:0;
     left:0px;
     display:none;
-    width:584px; /* Make sure your images are the same size */
-    height:369px; /* Make sure your images are the same size */
+    width:584px;  Make sure your images are the same size 
+    height:369px;  Make sure your images are the same size 
 
 
 }
@@ -515,7 +516,7 @@ label{
 
 }
 
-/* If an image is wrapped in a link */
+ If an image is wrapped in a link 
 .nivoSlider a.nivo-imageLink {
     position:absolute;
     top:0px;
@@ -530,7 +531,7 @@ label{
 
 }
 
-/* The slices and boxes in the Slider */
+ The slices and boxes in the Slider 
 
 .nivo-slice {
     display:block;
@@ -547,12 +548,12 @@ label{
 
 }
 
-/* Caption styles */
+ Caption styles 
 
 .nivo-caption {
     position:absolute;
     left: 0px;
-    /* right:0px; */
+     right:0px; 
     bottom:30px;
     background:#fff;
     color:#000000;
@@ -588,7 +589,7 @@ label{
 
 }
 
-/* Direction nav styles (e.g. Next & Prev) */
+ Direction nav styles (e.g. Next & Prev) 
 .nivo-directionNav a {
     position:absolute;
     top:43%;
@@ -614,7 +615,7 @@ label{
     display:none; 
 }
 
-/* Control nav styles (e.g. 1,2,3...) */
+ Control nav styles (e.g. 1,2,3...) 
 .nivo-controlNav {
     display:none; 
 
@@ -623,7 +624,7 @@ label{
 .nivo-controlNav a {
     display:none; 
 
-}
+}*/
 
 
 /*****************************/
@@ -1255,4 +1256,14 @@ ul.pagenav li.pagenav-next {
     margin-top: 17px;
     overflow: hidden;
     position: relative;
+
+
+.slider-wrapper { 
+	width: 80%; 
+	/*margin: 100px auto;*/
+        margin-left: 57px;
+}
+
+.clear {
+	clear:both;
 }

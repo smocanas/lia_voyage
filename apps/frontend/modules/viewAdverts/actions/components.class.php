@@ -19,7 +19,12 @@ class viewAdvertsComponents extends sfComponents {
 
             if (!$this->adverts)
             {
-                 $this->adverts = AdvertTable::getInstance()->findAll();
+                 $this->adverts = AdvertTable::getInstance()->createQuery("a")
+                         ->select("a.*, tr.name")
+                         ->leftJoin("TypeRoute tr ON a.type_route_id=tr.id")
+                         ->orderBy('a.id DESC')
+                         ->execute();
+                
             }
             $this->advertCount = count($this->adverts);
             $this->status = 'success';

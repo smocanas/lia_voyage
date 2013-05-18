@@ -24,6 +24,10 @@ abstract class BaseTypeRouteForm extends BaseFormDoctrine
       'name' => new sfValidatorString(array('max_length' => 255)),
     ));
 
+    $this->validatorSchema->setPostValidator(
+      new sfValidatorDoctrineUnique(array('model' => 'TypeRoute', 'column' => array('id')))
+    );
+
     $this->widgetSchema->setNameFormat('type_route[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
