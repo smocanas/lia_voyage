@@ -19,7 +19,7 @@
                     <table border="0">
                         <tr>
                             <td id="sitename">
-                                <a href="index.php"><img src="../images/logo.png" width="534" height="47" alt="logotype" /></a>
+                                <a href="/"><img src="<?php echo sfConfig::get('web_dir');?>/images/logo.png" width="534" height="47" alt="logotype" /></a>
                             </td>
                             <td class="searchBlock">
                                 <?php include_component('search', 'searchForm'); ?>

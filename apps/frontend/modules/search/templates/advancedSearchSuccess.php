@@ -16,7 +16,7 @@ $path = $_SERVER['SERVER_NAME'];
                 <td>
                     <?php $iteration = 0;?>
                     <?php foreach ($routesOptions as $option): ?>
-                        <div><input type="radio" name="advert[route]" value="<?php echo $option->id;?>" <?php echo $checked;?>><?php echo $option->name; ?></div>
+                        <div><input type="radio" name="advert[route]" value="<?php echo $option->id;?>"><?php echo $option->name; ?></div>
                     <?php endforeach;?>
                 </td>
             </tr>
@@ -29,7 +29,7 @@ $path = $_SERVER['SERVER_NAME'];
                 <td>
                     <?php $iteration = 0; ?>
                     <?php foreach ($directions as $direction): ?>
-                        <div><input type="radio" name="advert[direction]" value="<?php echo $direction->id; ?>" <?php echo $checked; ?>><?php echo $direction->name; ?></div>
+                        <div><input type="radio" name="advert[direction]" value="<?php echo $direction->id; ?>"><?php echo $direction->name; ?></div>
                     <?php endforeach; ?>
                 </td>
             </tr>

@@ -13,7 +13,6 @@ Doctrine_Manager::getInstance()->bindComponent('SfGuardRememberKey', 'doctrine')
  * @property string $ip_address
  * @property timestamp $created_at
  * @property timestamp $updated_at
- * @property SfGuardUser $SfGuardUser
  * 
  * @method integer            getId()           Returns the current record's "id" value
  * @method integer            getUserId()       Returns the current record's "user_id" value
@@ -21,14 +20,13 @@ Doctrine_Manager::getInstance()->bindComponent('SfGuardRememberKey', 'doctrine')
  * @method string             getIpAddress()    Returns the current record's "ip_address" value
  * @method timestamp          getCreatedAt()    Returns the current record's "created_at" value
  * @method timestamp          getUpdatedAt()    Returns the current record's "updated_at" value
- * @method SfGuardUser        getSfGuardUser()  Returns the current record's "SfGuardUser" value
  * @method SfGuardRememberKey setId()           Sets the current record's "id" value
  * @method SfGuardRememberKey setUserId()       Sets the current record's "user_id" value
  * @method SfGuardRememberKey setRememberKey()  Sets the current record's "remember_key" value
  * @method SfGuardRememberKey setIpAddress()    Sets the current record's "ip_address" value
  * @method SfGuardRememberKey setCreatedAt()    Sets the current record's "created_at" value
  * @method SfGuardRememberKey setUpdatedAt()    Sets the current record's "updated_at" value
- * @method SfGuardRememberKey setSfGuardUser()  Sets the current record's "SfGuardUser" value
+ * @property  $
  * 
  * @package    voyage
  * @subpackage model
@@ -98,7 +96,7 @@ abstract class BaseSfGuardRememberKey extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('SfGuardUser', array(
+        $this->hasMany('SfGuardUser', array(
              'local' => 'user_id',
              'foreign' => 'id'));
     }

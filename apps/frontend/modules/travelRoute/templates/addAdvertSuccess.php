@@ -86,7 +86,7 @@ $path = $_SERVER['SERVER_NAME'];
             </tr>
             <tr>
                 <td>Ora:<span class="required">*</span></td>
-                <td><input type="text" name="advert[time]" class="timepicker"/> </td>
+                <td><input type="text" name="advert[time]" class="timepicker"/><img src="/images/timepicker.png"/> </td>
             </tr>
             <tr>
                 <td>&nbsp;</td>

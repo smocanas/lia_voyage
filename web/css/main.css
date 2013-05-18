@@ -169,8 +169,8 @@ img .caption {
 } 
 
 fieldset {
-    margin:5px; 
-    padding:5px;
+    margin:-8px; 
+    padding:3px;
     border:none;
 
 }   
@@ -1155,7 +1155,7 @@ ul.pagenav li.pagenav-next {
     margin-left: 35px;
 }
 .timepicker{
-    margin-left: 5px;
+    margin-left: 0px;
 }
 
 .submitStyle{
@@ -1171,7 +1171,8 @@ ul.pagenav li.pagenav-next {
 .rightBlock{
     font-size: 16px;
     border-style:ridge;
-    background: #ffffff
+    background: #ffffff;
+    margin: 3px
 }
 
 .menuItem{

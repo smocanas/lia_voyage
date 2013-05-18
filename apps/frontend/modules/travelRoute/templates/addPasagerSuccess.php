@@ -58,7 +58,7 @@ $path = $_SERVER['SERVER_NAME'];
             </tr>
             <tr>
                 <td>
-                    Numarul de pasageri:
+                    Numarul de pasageri:<span class="required">*</span>
                 </td>
                 <td>
                     <input type="text" name="advert[nb_places]" class='nr_locuri'>
@@ -69,7 +69,7 @@ $path = $_SERVER['SERVER_NAME'];
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td>Data plecării:</td>
+                <td>Data plecării:<span class="required">*</span></td>
                 <td valign="top">
                     <input type="text" name="advert[departure_date]" value="Data plecării"   class="datepicker italic_p d_p"/>
                     <input type="text" name="advert[return_date]" value="Data întoarcerii" class="datepicker italic_i d_i"/>
@@ -81,7 +81,7 @@ $path = $_SERVER['SERVER_NAME'];
             </tr>
             <tr> 
                 <td>
-                    Locul de plecare: 
+                    Locul de plecare:<span class="required">*</span> 
                 </td>
                 <td>
                     <input type="text" name="advert[departure_place]" autocomplete="on"/>
@@ -89,14 +89,14 @@ $path = $_SERVER['SERVER_NAME'];
             </tr>
             <tr>
                 <td>Ora:<span class="required">*</span></td>
-                <td><input type="text" name="advert[time]" class="timepicker"/> </td>
+                <td><input type="text" name="advert[time]" class="timepicker"/><img src="/images/timepicker.png"/> </td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
             <tr> 
-                <td>Destinație:
+                <td>Destinație:<span class="required">*</span>
                 </td>
                 <td>
                     <input type="text" name="advert[destination]" autocomplete="on"/>

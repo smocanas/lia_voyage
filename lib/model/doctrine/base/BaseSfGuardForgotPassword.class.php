@@ -13,22 +13,20 @@ Doctrine_Manager::getInstance()->bindComponent('SfGuardForgotPassword', 'doctrin
  * @property timestamp $expires_at
  * @property timestamp $created_at
  * @property timestamp $updated_at
- * @property SfGuardUser $SfGuardUser
  * 
- * @method integer               getId()          Returns the current record's "id" value
- * @method integer               getUserId()      Returns the current record's "user_id" value
- * @method string                getUniqueKey()   Returns the current record's "unique_key" value
- * @method timestamp             getExpiresAt()   Returns the current record's "expires_at" value
- * @method timestamp             getCreatedAt()   Returns the current record's "created_at" value
- * @method timestamp             getUpdatedAt()   Returns the current record's "updated_at" value
- * @method SfGuardUser           getSfGuardUser() Returns the current record's "SfGuardUser" value
- * @method SfGuardForgotPassword setId()          Sets the current record's "id" value
- * @method SfGuardForgotPassword setUserId()      Sets the current record's "user_id" value
- * @method SfGuardForgotPassword setUniqueKey()   Sets the current record's "unique_key" value
- * @method SfGuardForgotPassword setExpiresAt()   Sets the current record's "expires_at" value
- * @method SfGuardForgotPassword setCreatedAt()   Sets the current record's "created_at" value
- * @method SfGuardForgotPassword setUpdatedAt()   Sets the current record's "updated_at" value
- * @method SfGuardForgotPassword setSfGuardUser() Sets the current record's "SfGuardUser" value
+ * @method integer               getId()         Returns the current record's "id" value
+ * @method integer               getUserId()     Returns the current record's "user_id" value
+ * @method string                getUniqueKey()  Returns the current record's "unique_key" value
+ * @method timestamp             getExpiresAt()  Returns the current record's "expires_at" value
+ * @method timestamp             getCreatedAt()  Returns the current record's "created_at" value
+ * @method timestamp             getUpdatedAt()  Returns the current record's "updated_at" value
+ * @method SfGuardForgotPassword setId()         Sets the current record's "id" value
+ * @method SfGuardForgotPassword setUserId()     Sets the current record's "user_id" value
+ * @method SfGuardForgotPassword setUniqueKey()  Sets the current record's "unique_key" value
+ * @method SfGuardForgotPassword setExpiresAt()  Sets the current record's "expires_at" value
+ * @method SfGuardForgotPassword setCreatedAt()  Sets the current record's "created_at" value
+ * @method SfGuardForgotPassword setUpdatedAt()  Sets the current record's "updated_at" value
+ * @property  $
  * 
  * @package    voyage
  * @subpackage model
@@ -98,7 +96,7 @@ abstract class BaseSfGuardForgotPassword extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('SfGuardUser', array(
+        $this->hasMany('SfGuardUser', array(
              'local' => 'user_id',
              'foreign' => 'id'));
     }
