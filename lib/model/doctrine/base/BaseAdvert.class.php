@@ -1,4 +1,6 @@
 <?php
+// Connection Component Binding
+Doctrine_Manager::getInstance()->bindComponent('Advert', 'doctrine');
 
 /**
  * BaseAdvert
@@ -12,13 +14,15 @@
  * @property string $start_location
  * @property string $end_location
  * @property string $middle_location
- * @property timestamp $time
+ * @property date $departure_date
+ * @property date $return_date
+ * @property time $time
  * @property integer $p_number
  * @property string $comment
  * @property TypeAdvert $TypeAdvert
  * @property TypeRoute $TypeRoute
  * @property Direction $Direction
- * @property Doctrine_Collection $advert
+ * @property Doctrine_Collection $AcceptedAdverts
  * 
  * @method integer             getId()              Returns the current record's "id" value
  * @method integer             getTypeId()          Returns the current record's "type_id" value
@@ -27,13 +31,15 @@
  * @method string              getStartLocation()   Returns the current record's "start_location" value
  * @method string              getEndLocation()     Returns the current record's "end_location" value
  * @method string              getMiddleLocation()  Returns the current record's "middle_location" value
- * @method timestamp           getTime()            Returns the current record's "time" value
+ * @method date                getDepartureDate()   Returns the current record's "departure_date" value
+ * @method date                getReturnDate()      Returns the current record's "return_date" value
+ * @method time                getTime()            Returns the current record's "time" value
  * @method integer             getPNumber()         Returns the current record's "p_number" value
  * @method string              getComment()         Returns the current record's "comment" value
  * @method TypeAdvert          getTypeAdvert()      Returns the current record's "TypeAdvert" value
  * @method TypeRoute           getTypeRoute()       Returns the current record's "TypeRoute" value
  * @method Direction           getDirection()       Returns the current record's "Direction" value
- * @method Doctrine_Collection getAdvert()          Returns the current record's "advert" collection
+ * @method Doctrine_Collection getAcceptedAdverts() Returns the current record's "AcceptedAdverts" collection
  * @method Advert              setId()              Sets the current record's "id" value
  * @method Advert              setTypeId()          Sets the current record's "type_id" value
  * @method Advert              setTypeRouteId()     Sets the current record's "type_route_id" value
@@ -41,13 +47,15 @@
  * @method Advert              setStartLocation()   Sets the current record's "start_location" value
  * @method Advert              setEndLocation()     Sets the current record's "end_location" value
  * @method Advert              setMiddleLocation()  Sets the current record's "middle_location" value
+ * @method Advert              setDepartureDate()   Sets the current record's "departure_date" value
+ * @method Advert              setReturnDate()      Sets the current record's "return_date" value
  * @method Advert              setTime()            Sets the current record's "time" value
  * @method Advert              setPNumber()         Sets the current record's "p_number" value
  * @method Advert              setComment()         Sets the current record's "comment" value
  * @method Advert              setTypeAdvert()      Sets the current record's "TypeAdvert" value
  * @method Advert              setTypeRoute()       Sets the current record's "TypeRoute" value
  * @method Advert              setDirection()       Sets the current record's "Direction" value
- * @method Advert              setAdvert()          Sets the current record's "advert" collection
+ * @method Advert              setAcceptedAdverts() Sets the current record's "AcceptedAdverts" collection
  * 
  * @package    voyage
  * @subpackage model
@@ -59,83 +67,109 @@ abstract class BaseAdvert extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('advert');
-        $this->hasColumn('id', 'integer', 11, array(
+        $this->hasColumn('id', 'integer', 8, array(
              'type' => 'integer',
-             'unique' => true,
-             'autoincrement' => true,
+             'fixed' => 0,
+             'unsigned' => false,
              'primary' => true,
-             'length' => 11,
+             'autoincrement' => true,
+             'length' => 8,
              ));
-        $this->hasColumn('type_id', 'integer', 1, array(
+        $this->hasColumn('type_id', 'integer', 8, array(
              'type' => 'integer',
-             'unique' => false,
-             'autoincrement' => false,
+             'fixed' => 0,
+             'unsigned' => false,
              'primary' => false,
              'notnull' => true,
-             'length' => 1,
-             ));
-        $this->hasColumn('type_route_id', 'integer', 1, array(
-             'type' => 'integer',
-             'unique' => false,
              'autoincrement' => false,
+             'length' => 8,
+             ));
+        $this->hasColumn('type_route_id', 'integer', 8, array(
+             'type' => 'integer',
+             'fixed' => 0,
+             'unsigned' => false,
              'primary' => false,
              'notnull' => true,
-             'length' => 1,
-             ));
-        $this->hasColumn('direction_id', 'integer', 1, array(
-             'type' => 'integer',
-             'unique' => false,
              'autoincrement' => false,
+             'length' => 8,
+             ));
+        $this->hasColumn('direction_id', 'integer', 8, array(
+             'type' => 'integer',
+             'fixed' => 0,
+             'unsigned' => false,
              'primary' => false,
              'notnull' => true,
-             'length' => 1,
+             'autoincrement' => false,
+             'length' => 8,
              ));
         $this->hasColumn('start_location', 'string', 255, array(
              'type' => 'string',
-             'unique' => false,
-             'autoincrement' => false,
+             'fixed' => 0,
+             'unsigned' => false,
              'primary' => false,
              'notnull' => true,
+             'autoincrement' => false,
              'length' => 255,
              ));
         $this->hasColumn('end_location', 'string', 255, array(
              'type' => 'string',
-             'unique' => false,
-             'autoincrement' => false,
+             'fixed' => 0,
+             'unsigned' => false,
              'primary' => false,
              'notnull' => true,
+             'autoincrement' => false,
              'length' => 255,
              ));
         $this->hasColumn('middle_location', 'string', 255, array(
              'type' => 'string',
-             'unique' => false,
-             'autoincrement' => false,
+             'fixed' => 0,
+             'unsigned' => false,
              'primary' => false,
              'notnull' => true,
+             'autoincrement' => false,
              'length' => 255,
              ));
-        $this->hasColumn('time', 'timestamp', null, array(
-             'type' => 'timestamp',
-             'unique' => false,
-             'autoincrement' => false,
+        $this->hasColumn('departure_date', 'date', null, array(
+             'type' => 'date',
+             'fixed' => 0,
+             'unsigned' => false,
              'primary' => false,
              'notnull' => true,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('return_date', 'date', null, array(
+             'type' => 'date',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
+             ));
+        $this->hasColumn('time', 'time', null, array(
+             'type' => 'time',
+             'fixed' => 0,
+             'unsigned' => false,
+             'primary' => false,
+             'notnull' => true,
+             'autoincrement' => false,
              ));
         $this->hasColumn('p_number', 'integer', 3, array(
              'type' => 'integer',
-             'unique' => false,
-             'autoincrement' => false,
+             'fixed' => 0,
+             'unsigned' => false,
              'primary' => false,
              'notnull' => true,
+             'autoincrement' => false,
              'length' => 3,
              ));
-        $this->hasColumn('comment', 'string', 512, array(
+        $this->hasColumn('comment', 'string', null, array(
              'type' => 'string',
-             'unique' => false,
-             'autoincrement' => false,
+             'fixed' => 0,
+             'unsigned' => false,
              'primary' => false,
              'notnull' => true,
-             'length' => 512,
+             'autoincrement' => false,
+             'length' => '',
              ));
     }
 
@@ -143,23 +177,26 @@ abstract class BaseAdvert extends sfDoctrineRecord
     {
         parent::setUp();
         $this->hasOne('TypeAdvert', array(
-             'local' => 'id',
-             'foreign' => 'type_id'));
+             'local' => 'type_id',
+             'foreign' => 'id'));
 
         $this->hasOne('TypeRoute', array(
-             'local' => 'id',
-             'foreign' => 'type_route_id'));
+             'local' => 'type_route_id',
+             'foreign' => 'id'));
 
         $this->hasOne('Direction', array(
-             'local' => 'id',
-             'foreign' => 'direction_id'));
-
-        $this->hasMany('AcceptedPersons as advert', array(
-             'local' => 'advert_id',
+             'local' => 'direction_id',
              'foreign' => 'id'));
+
+        $this->hasMany('AcceptedPersons as AcceptedAdverts', array(
+             'local' => 'id',
+             'foreign' => 'advert_id'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));
+        $signable0 = new Doctrine_Template_Signable(array(
+             ));
         $this->actAs($timestampable0);
+        $this->actAs($signable0);
     }
 }

@@ -16,23 +16,23 @@ abstract class BaseAcceptedPersonsForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'         => new sfWidgetFormInputHidden(),
-      'avdert_id'  => new sfWidgetFormInputText(),
-      'user_id'    => new sfWidgetFormInputText(),
+      'advert_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Advert'), 'add_empty' => false)),
+      'user_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => false)),
+      'p_number'   => new sfWidgetFormInputText(),
+      'comment'    => new sfWidgetFormTextarea(),
       'created_at' => new sfWidgetFormDateTime(),
       'updated_at' => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
       'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'avdert_id'  => new sfValidatorInteger(),
-      'user_id'    => new sfValidatorInteger(),
+      'advert_id'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Advert'))),
+      'user_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'))),
+      'p_number'   => new sfValidatorInteger(),
+      'comment'    => new sfValidatorString(),
       'created_at' => new sfValidatorDateTime(),
       'updated_at' => new sfValidatorDateTime(),
     ));
-
-    $this->validatorSchema->setPostValidator(
-      new sfValidatorDoctrineUnique(array('model' => 'AcceptedPersons', 'column' => array('id')))
-    );
 
     $this->widgetSchema->setNameFormat('accepted_persons[%s]');
 

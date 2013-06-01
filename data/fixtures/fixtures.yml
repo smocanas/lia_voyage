@@ -1,3 +1,14 @@
+sfGuardPermission:
+  Permission_admin:
+    name:           admin
+    description:    Administrator permission
+
+sfGuardGroup:
+  Group_admin:
+    name:           admin
+    description:    Administrator group
+    Permissions:    [Permission_admin]
+    
 sfGuardUser:
   User_admin:
     first_name:     John
@@ -7,14 +18,3 @@ sfGuardUser:
     password:       admin
     is_super_admin: true
     Groups:         [Group_admin]
-
-sfGuardGroup:
-  Group_admin:
-    name:           admin
-    description:    Administrator group
-    Permissions:    [Permission_admin]
-
-sfGuardPermission:
-  Permission_admin:
-    name:           admin
-    description:    Administrator permission

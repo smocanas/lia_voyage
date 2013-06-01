@@ -12,3 +12,8 @@ TypeRoute:
     name: Regulat
   TypeRoute_3:
     name: 'Domiciliu - Serviciu'
+TypeAdvert:
+  TypeAdvert_1:
+    name: Sofer
+  TypeAdvert_2:
+    name: Pasager

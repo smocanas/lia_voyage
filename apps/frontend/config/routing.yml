@@ -26,6 +26,34 @@ sf_guard_password:
   url:   /request_password
   param: { module: sfGuardAuth, action: password }
 
+showAdvert:
+  url: showAdvert/:id
+  param: { module: viewAdverts, action: showAdvert }
+  
+removeAdvert:
+  url: removeAdvert/:id
+  param: { module: travelRoute, action: removeAdvert }
+  
+edit:
+  url: edit/:id
+  param: { module: travelRoute, action: editAdvert }
+  
+userprofile:
+  url: user/profile/:id
+  param: { module: userManagement, action: viewProfile }
+  
+bookForm:
+  url: book/form/:id
+  param: { module: bookAdvert, action: bookForm }
+  
+booked:
+  url: booked/:id
+  param: { module: bookAdvert, action: showBook }
+  
+bookDelete:
+  url: book/delete/:id
+  param: { module: bookAdvert, action: deleteBook }
+
 # generic rules
 # please, remove them by adding more specific rules
 default_index:

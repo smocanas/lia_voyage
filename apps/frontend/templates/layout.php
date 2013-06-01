@@ -22,7 +22,9 @@
                                 <a href="/"><img src="<?php echo sfConfig::get('web_dir');?>/images/logo.png" width="534" height="47" alt="logotype" /></a>
                             </td>
                             <td class="searchBlock">
-                                <?php include_component('search', 'searchForm'); ?>
+                                <?php if ($sf_user->isAuthenticated()): ?>
+                                    <?php include_component('search', 'searchForm'); ?>
+                                <?php endif; ?>
                             </td>
                         </tr>
                     </table>

@@ -13,15 +13,19 @@ abstract class BaseAcceptedPersonsFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'avdert_id'  => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'user_id'    => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'advert_id'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Advert'), 'add_empty' => true)),
+      'user_id'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => true)),
+      'p_number'   => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'comment'    => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'created_at' => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'updated_at' => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
     ));
 
     $this->setValidators(array(
-      'avdert_id'  => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
-      'user_id'    => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'advert_id'  => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Advert'), 'column' => 'id')),
+      'user_id'    => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('sfGuardUser'), 'column' => 'id')),
+      'p_number'   => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'comment'    => new sfValidatorPass(array('required' => false)),
       'created_at' => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'updated_at' => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
     ));
@@ -44,8 +48,10 @@ abstract class BaseAcceptedPersonsFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'         => 'Number',
-      'avdert_id'  => 'Number',
-      'user_id'    => 'Number',
+      'advert_id'  => 'ForeignKey',
+      'user_id'    => 'ForeignKey',
+      'p_number'   => 'Number',
+      'comment'    => 'Text',
       'created_at' => 'Date',
       'updated_at' => 'Date',
     );

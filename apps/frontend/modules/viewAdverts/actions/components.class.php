@@ -20,14 +20,16 @@ class viewAdvertsComponents extends sfComponents {
             if (!$this->adverts)
             {
                  $this->adverts = AdvertTable::getInstance()->createQuery("a")
-                         ->select("a.*, tr.name")
-                         ->leftJoin("TypeRoute tr ON a.type_route_id=tr.id")
+                         ->select("a.*")
+                         ->leftJoin("a.TypeRoute tr ON a.type_route_id=tr.id")
                          ->orderBy('a.id DESC')
                          ->execute();
+//                $this->adverts = AdvertTable::getInstance()->findAll();
                 
             }
             $this->advertCount = count($this->adverts);
             $this->status = 'success';
+            $this->userId = $this->getUser()->getGuardUser()->getId();
         } catch (Exception $e) {
             $this->status = 'error';
             $this->message = $e->getMessage();

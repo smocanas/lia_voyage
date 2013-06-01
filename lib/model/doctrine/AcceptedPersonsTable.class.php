@@ -16,4 +16,55 @@ class AcceptedPersonsTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('AcceptedPersons');
     }
+    
+    public static function addRequest($params, $id, $user)
+    {
+        $acceptedPersons = new AcceptedPersons();
+        if ($params['p_number'])
+        {
+            $acceptedPersons->setPNumber($params['p_number']);
+        }
+        
+        if ($params['comment'])
+        {
+            $acceptedPersons->setComment($params['comment']);
+        }
+        
+        $acceptedPersons->setAdvertId($id);
+        $acceptedPersons->setUserId($user);
+        
+        $acceptedPersons->save();
+    }
+    
+    /**
+     * 
+     * @param type $id
+     * @param type $user
+     * @return type
+     */
+    public static function getUserBook($id, $user)
+    {
+        $adverts = self::getInstance()->createQuery('ap')
+                ->select('ap.*')
+                ->where('user_id = ?',  array($user))
+                ->andWhere('advert_id = ?', array($id))
+                ->execute(array(), Doctrine_Core::HYDRATE_ARRAY);
+        
+        return $adverts;
+    }
+    
+    /**
+     * 
+     * @param type $id
+     * @param type $user
+     */
+    public static function deleteBook($id, $user)
+    {
+        $book = self::getInstance()->find($id, Doctrine_Core::HYDRATE_RECORD);
+        
+        if ($book->getUserId() == $user)
+        {
+            $book->delete();
+        }
+    }
 }

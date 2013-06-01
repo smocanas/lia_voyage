@@ -19,6 +19,7 @@ class AdvertTable extends Doctrine_Table
     
     public static function addAdvert($advert = array(), $type = 1)
     {
+        $id              = $advert['advertId']?$advert['advertId']:false;
         $route           = $advert['route']?$advert['route']:false;
         $direction       = $advert['direction']?$advert['direction']:false;
         $nb_places       = $advert['nb_places']?$advert['nb_places']:false;
@@ -28,10 +29,12 @@ class AdvertTable extends Doctrine_Table
         $time            = $advert['time']?$advert['time']:false;
         $destination     = $advert['destination']?$advert['destination']:false;
         $comment         = $advert['comment']?$advert['comment']:false;
-        $departure_date = explode('/', $departure_date);
-        $departure_date = $departure_date[2] . '-' . $departure_date[0] . '-' . $departure_date[1];
         $date = $departure_date . ' ' . $time . ':00';
         $obj = new Advert();
+        if ($id)
+        {
+            $obj->assignIdentifier($id);
+        }
         $obj->setTypeId($type);
         if ($route)
         {
@@ -43,14 +46,24 @@ class AdvertTable extends Doctrine_Table
             $obj->setDirectionId($direction);
         }
         
+        if ($departure_date)
+        {
+            $obj->setDepartureDate($departure_date);
+        }
+        
+        if ($return_date)
+        {
+            $obj->setReturnDate($return_date);
+        }
+        
+        if ($time)
+        {
+            $obj->setTime($time);
+        }
+        
         if ($nb_places)
         {
             $obj->setPNumber($nb_places);
-        }
-        
-        if ($departure_date)
-        {
-            $obj->setTime($date);
         }
         
         if ($departure_place)
@@ -115,11 +128,19 @@ class AdvertTable extends Doctrine_Table
             }
             if ($isValide == true)
             {
-                $departure_date = explode('/', $params['departure_date']);
-                $time = $params['time'];
-                $departure_date = $departure_date[2] . '-' . $departure_date[0] . '-' . $departure_date[1];
-                $date = $departure_date . ' ' . $time . ':00';
-                $query .= ' AND a.time="' . $date . '"';
+                $query .= ' AND a.departure_date="' . $params['departure_date'] . '"';
+            }
+        }
+        
+        if ($params['return_date'])
+        {
+            $isValide = false;
+            if(preg_match('/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/', $params['return_date'])){
+                $isValide = true;
+            }
+            if ($isValide == true)
+            {
+                $query .= ' AND a.return_date="' . $params['return_date'] . '"';
             }
         }
         
@@ -148,5 +169,14 @@ class AdvertTable extends Doctrine_Table
         }
         
         return $objArray;
+    }
+    
+    public function removeAdvert($id, $user)
+    {
+        $advert = AdvertTable::getInstance()->find($id);
+        if ($advert->getCreatedBy() == $user)
+        {
+            $advert->delete();
+        }
     }
 }

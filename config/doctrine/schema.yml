@@ -1,6 +1,7 @@
 AcceptedPersons:
   connection: doctrine
   tableName: accepted_persons
+  actAs: [Timestampable]
   columns:
     id:
       type: integer(8)
@@ -8,7 +9,7 @@ AcceptedPersons:
       unsigned: false
       primary: true
       autoincrement: true
-    avdert_id:
+    advert_id:
       type: integer(8)
       fixed: false
       unsigned: false
@@ -22,23 +23,41 @@ AcceptedPersons:
       primary: false
       notnull: true
       autoincrement: false
-    created_at:
-      type: timestamp(25)
+    p_number:
+      type: integer(3)
       fixed: false
       unsigned: false
       primary: false
       notnull: true
       autoincrement: false
-    updated_at:
-      type: timestamp(25)
+    comment:
+      type: string()
       fixed: false
       unsigned: false
       primary: false
       notnull: true
       autoincrement: false
+  relations:
+    Advert:
+      local: advert_id
+      foreign: id
+      foreignAlias: AcceptedAdverts
+      class: Advert
+      type: one
+      foreignType: many
+      onDelete: CASCADE
+    sfGuardUser:
+      type:         one
+      foreignType:  many
+      class:        sfGuardUser
+      local:        user_id
+      foreign:      id
+      onDelete:     CASCADE
+      foreignAlias: UserAccount
 Advert:
   connection: doctrine
   tableName: advert
+  actAs: [Timestampable, Signable]
   columns:
     id:
       type: integer(8)
@@ -47,21 +66,21 @@ Advert:
       primary: true
       autoincrement: true
     type_id:
-      type: integer(1)
+      type: integer(8)
       fixed: false
       unsigned: false
       primary: false
       notnull: true
       autoincrement: false
     type_route_id:
-      type: integer(1)
+      type: integer(8)
       fixed: false
       unsigned: false
       primary: false
       notnull: true
       autoincrement: false
     direction_id:
-      type: integer(1)
+      type: integer(8)
       fixed: false
       unsigned: false
       primary: false
@@ -88,8 +107,22 @@ Advert:
       primary: false
       notnull: true
       autoincrement: false
+    departure_date:
+      type: date
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    return_date:
+      type: date
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
     time:
-      type: timestamp(25)
+      type: time
       fixed: false
       unsigned: false
       primary: false
@@ -109,20 +142,28 @@ Advert:
       primary: false
       notnull: true
       autoincrement: false
-    created_at:
-      type: timestamp(25)
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: true
-      autoincrement: false
-    updated_at:
-      type: timestamp(25)
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: true
-      autoincrement: false
+  relations:
+    TypeAdvert:
+      local: type_id
+      class: TypeAdvert
+      foreign: id
+      foreignAlias: TypeAdvertRecord
+      foreignType: many
+      type: one
+    TypeRoute:
+      local: type_route_id
+      foreign: id
+      foreignAlias: TypeRouteRecord
+      class: TypeRoute
+      foreignType: many
+      type: one
+    Direction:
+      local: direction_id
+      class: Direction
+      foreign: id
+      foreignAlias: DirectionRecord
+      foreignType: many
+      type: one
 Direction:
   connection: doctrine
   tableName: direction
@@ -174,3 +215,28 @@ TypeRoute:
       primary: false
       notnull: true
       autoincrement: false
+      
+sfGuardUserProfile:
+  columns:
+    id: 
+      type: integer
+      primary: true
+      autoincrement: true
+    user_id:
+      type: integer
+    phone:
+      type: string(20)
+      notnull: true
+    photo:
+      type: string(200)
+      notnull: false
+    birthday:
+      type: date
+  relations:
+    User:
+      class: sfGuardUser
+      local: user_id
+      foreign: id
+      type: one
+      foreignType: one
+      foreignAlias: Profile

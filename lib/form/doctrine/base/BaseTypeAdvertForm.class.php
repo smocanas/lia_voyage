@@ -24,6 +24,10 @@ abstract class BaseTypeAdvertForm extends BaseFormDoctrine
       'name' => new sfValidatorString(array('max_length' => 255)),
     ));
 
+    $this->validatorSchema->setPostValidator(
+      new sfValidatorDoctrineUnique(array('model' => 'TypeAdvert', 'column' => array('id')))
+    );
+
     $this->widgetSchema->setNameFormat('type_advert[%s]');
 
     $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);

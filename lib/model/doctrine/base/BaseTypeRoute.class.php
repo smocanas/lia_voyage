@@ -1,4 +1,6 @@
 <?php
+// Connection Component Binding
+Doctrine_Manager::getInstance()->bindComponent('TypeRoute', 'doctrine');
 
 /**
  * BaseTypeRoute
@@ -7,14 +9,14 @@
  * 
  * @property integer $id
  * @property string $name
- * @property Doctrine_Collection $typeRoute
+ * @property Doctrine_Collection $TypeRouteRecord
  * 
- * @method integer             getId()        Returns the current record's "id" value
- * @method string              getName()      Returns the current record's "name" value
- * @method Doctrine_Collection getTypeRoute() Returns the current record's "typeRoute" collection
- * @method TypeRoute           setId()        Sets the current record's "id" value
- * @method TypeRoute           setName()      Sets the current record's "name" value
- * @method TypeRoute           setTypeRoute() Sets the current record's "typeRoute" collection
+ * @method integer             getId()              Returns the current record's "id" value
+ * @method string              getName()            Returns the current record's "name" value
+ * @method Doctrine_Collection getTypeRouteRecord() Returns the current record's "TypeRouteRecord" collection
+ * @method TypeRoute           setId()              Sets the current record's "id" value
+ * @method TypeRoute           setName()            Sets the current record's "name" value
+ * @method TypeRoute           setTypeRouteRecord() Sets the current record's "TypeRouteRecord" collection
  * 
  * @package    voyage
  * @subpackage model
@@ -26,19 +28,21 @@ abstract class BaseTypeRoute extends sfDoctrineRecord
     public function setTableDefinition()
     {
         $this->setTableName('type_route');
-        $this->hasColumn('id', 'integer', 11, array(
+        $this->hasColumn('id', 'integer', 8, array(
              'type' => 'integer',
-             'unique' => true,
-             'autoincrement' => true,
+             'fixed' => 0,
+             'unsigned' => false,
              'primary' => true,
-             'length' => 11,
+             'autoincrement' => true,
+             'length' => 8,
              ));
         $this->hasColumn('name', 'string', 255, array(
              'type' => 'string',
-             'unique' => false,
-             'autoincrement' => false,
+             'fixed' => 0,
+             'unsigned' => false,
              'primary' => false,
              'notnull' => true,
+             'autoincrement' => false,
              'length' => 255,
              ));
     }
@@ -46,8 +50,8 @@ abstract class BaseTypeRoute extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasMany('Advert as typeRoute', array(
-             'local' => 'type_route_id',
-             'foreign' => 'id'));
+        $this->hasMany('Advert as TypeRouteRecord', array(
+             'local' => 'id',
+             'foreign' => 'type_route_id'));
     }
 }

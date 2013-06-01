@@ -9,6 +9,12 @@
         <div class="menuItem">
             <a href="<?php echo url_for("travelRoute/addPasager"); ?>">Pasager</a>
         </div>
+        <div class="menuItem">
+            <a href="<?php echo url_for("userManagement/editProfile"); ?>">Editeaza profil</a>
+        </div>
+        <div class="menuItem">
+            <a href="<?php echo url_for("/logout"); ?>">Logout</a>
+        </div>
         <br>
         </br>
         <div class="menuItemViewAdverts">

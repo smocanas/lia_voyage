@@ -16,5 +16,6 @@ class searchComponents extends sfComponents {
         {
             $this->s2 = 'Cauta...';
         }
+        
     }
 }
