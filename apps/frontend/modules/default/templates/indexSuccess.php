@@ -1,13 +1,13 @@
 <div class="slider-wrapper theme-default">
     <div id="slider" class="nivoSlider">
-        <img src="images/toystory.jpg" data-thumb="images/toystory.jpg" alt="" />
-        <a href="http://dev7studios.com"><img src="images/up.jpg" data-thumb="images/up.jpg" alt="" title="This is an example of a caption" /></a>
-        <img src="images/walle.jpg" data-thumb="images/walle.jpg" alt="" data-transition="slideInLeft" />
-        <img src="images/nemo.jpg" data-thumb="images/nemo.jpg" alt="" title="#htmlcaption" />
+        <img src="images/img1.jpg" data-thumb="images/img1.jpg" alt="" />
+        <img src="images/img2.jpg" data-thumb="images/img2.jpg" alt="" /></a>
+        <img src="images/img3.jpg" data-thumb="images/img3.jpg" alt="" data-transition="slideInLeft" />
+        <img src="images/img4.jpg" data-thumb="images/img4.jpg" alt="" title="#htmlcaption" />
     </div>
-    <div id="htmlcaption" class="nivo-html-caption">
+    <!--<div id="htmlcaption" class="nivo-html-caption">
         <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>. 
-    </div>
+    </div>-->
 </div>
 <script type="text/javascript">
     jQuery(document).ready(function() {
