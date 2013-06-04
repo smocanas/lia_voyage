@@ -18,7 +18,7 @@
 ?>
 <form class="<?php echo $formStyle; ?>" name="searchform2" method="POST" action="<?php echo url_for('search/index'); ?>">
     <div class="<?php echo $fieldContainer; ?>">
-        <input type="text" name="s2" class="<?php echo $inputStyle; ?>" placeholder="<?php echo $s2; ?>" tabindex="2" />
+        <input type="text" name="s2" class="<?php echo $inputStyle; ?>" placeholder="<?php echo $s2; ?>" tabindex="2" value="<?php echo $s2; ?>"/>
         <input type="submit" name="search2btn" class="<?php echo $buttonStyle; ?>" value="<?php echo $submitValue; ?>" />
     </div>
 </form>

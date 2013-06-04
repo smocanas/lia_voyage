@@ -22,3 +22,8 @@
         </div>
     </div>
 </fieldset>
+<br />
+<script src="http://connect.facebook.net/ro_RO/all.js#xfbml=1"></script>
+<div>
+    <fb:like-box class=" fb_iframe_widget " header="true" stream="false" show_faces="true" width="248" href="https://www.facebook.com/Calatorim.md" style="background:#fff"></fb:like-box>
+</div>
