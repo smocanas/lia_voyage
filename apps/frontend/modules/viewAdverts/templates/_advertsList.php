@@ -8,6 +8,13 @@
         <?php endif; ?>
         <div class="ui-state-highlight ui-corner-all advertStyle">
             <div class="advertRoute">
+                <div class="routeImage">
+                    <?php if ($advert->getTypeId() == 1):?>
+                        <img src="/images/volan.png" />
+                    <?php elseif ($advert->getTypeId() == 2): ?>
+                        <img src="/images/pasager.png" />
+                    <?php endif; ?>
+                </div>
                 <div class="advertRouteDetails">
                     <a href="<?php echo url_for('/showAdvert'); ?>/<?php echo $advert->getId(); ?>"><?php echo $advert->getStartLocation() . ' - ' . $advert->getEndLocation(); ?></a>
                     <?php

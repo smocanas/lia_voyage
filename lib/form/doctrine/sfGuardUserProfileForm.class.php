@@ -20,6 +20,10 @@ class sfGuardUserProfileForm extends BasesfGuardUserProfileForm
       
       $this->widgetSchema['photo'] = new sfWidgetFormInputFile();
 
+      $this->widgetSchema['phone']->setLabel('Telefon');
+      $this->widgetSchema['photo']->setLabel('Poza');
+      $this->widgetSchema['birthday']->setLabel('Ziua de nastere');
+        
       $this->widgetSchema->setNameFormat('userProfile[%s]');
   }
 }
