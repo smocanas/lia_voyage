@@ -39,7 +39,7 @@ edit:
   param: { module: travelRoute, action: editAdvert }
   
 userprofile:
-  url: user/profile/:id
+  url: profile/:id
   param: { module: userManagement, action: viewProfile }
   
 bookForm:

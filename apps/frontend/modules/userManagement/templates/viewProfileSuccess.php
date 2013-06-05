@@ -1,19 +1,23 @@
 <?php 
-    if ($objectType == 'userProfile')
-    {
-        $phone = $userProfile->getPhone();
-        $photo = $userProfile->getPhoto();
-        $birthday = $userProfile->getBirthday();
-        $user = $userProfile->getProfile();
-    }
-    else if ($objectType == 'user')
-    {
-        $user = $userProfile;
-    }
+//    if ($objectType == 'userProfile')
+//    {
+//        $phone = $userProfile->getPhone();
+//        $photo = $userProfile->getPhoto();
+//        $birthday = $userProfile->getBirthday();
+//        $user = $userProfile->getProfile();
+//    }
+//    else if ($objectType == 'user')
+//    {
+//        $user = $userProfile;
+//    }
     
-    $firstName = $user->getFirstName();
-    $lastName = $user->getLastName();
-    $email = $user->getEmailAddress();
+    $firstName = $userProfile->getFirstName();
+    $lastName = $userProfile->getLastName();
+    $email = $userProfile->getEmailAddress();
+    $profile = $userProfile->getProfile();
+    $phone = $profile->getPhone();
+    $photo = $profile->getPhoto();
+    $birthday = $profile->getBirthday();
     
 ?>
 <div class="content-page">

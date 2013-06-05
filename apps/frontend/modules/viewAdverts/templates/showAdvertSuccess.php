@@ -74,7 +74,7 @@
                     <?php foreach ($personsArray as $id => $data): ?>
                         <div bookId ="<?php echo $id; ?>">
                             <span><?php echo $iterator; ?>. </span>
-                            <a href="<?php echo url_for('user/profile') . '/' . $data['user_id']; ?>" class="userLink"><?php echo Utils::getUserName($data['user_id']); ?></a>
+                            <a href="<?php echo url_for('profile/'.$data['user_id']); ?>" class="userLink"><?php echo Utils::getUserName($data['user_id']); ?></a>
                             <span>(<?php echo Utils::getAdvertNumber($data['p_number']); ?>)</span>
                         </div>
                         <?php $iterator++; ?>
