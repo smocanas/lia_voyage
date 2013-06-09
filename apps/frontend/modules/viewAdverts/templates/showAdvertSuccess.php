@@ -46,13 +46,13 @@
                 <td></td>
             </tr>
             <tr class="fieldBorder">
-                <td>Date de plecare</td>
+                <td>Data de plecare</td>
                 <td class="resultStyle"><?php echo $advert->getDepartureDate() . ' ' . $advert->getTime(); ?></td>
                 <td></td>
             </tr>
             <?php if ($advert->getReturnDate()): ?>
                 <tr class="fieldBorder">
-                    <td>Date de intoarcere</td>
+                    <td>Data de intoarcere</td>
                     <td class="resultStyle"><?php echo $advert->getReturnDate(); ?></td>
                     <td></td>
                 </tr>

@@ -82,6 +82,7 @@ class AdvertTable extends Doctrine_Table
         }
         
         $obj->save();
+        return $obj;
     }
     
     public static function search($word)

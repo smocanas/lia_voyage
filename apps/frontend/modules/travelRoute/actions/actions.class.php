@@ -34,7 +34,49 @@ class travelRouteActions extends sfActions {
         $user = $this->getUser()->getGuardUser()->getId();
         $advert = $request->getPostParameter('advert');
         $advert['user_id'] = $user;
-        AdvertTable::addAdvert($advert);
+        $advertObj = AdvertTable::addAdvert($advert);
+        
+        $FB_APP_ID = '151347955048454';
+        $FB_APP_SECRET = '55073ccab4144d53a562ff4690342a86';
+        
+        $token = FacebookPost::get_app_token($FB_APP_ID, $FB_APP_SECRET);
+        
+        $facebook = new Facebook(array(
+            'appId'  => $FB_APP_ID,
+            'secret' => $FB_APP_SECRET,
+            'cookie' => false,
+        ));
+        //facebook post
+        $postName = $advertObj->getStartLocation() . ' - ' . $advertObj->getEndLocation();
+        $postMessage = "
+            Tip ruta : " . $advertObj->getTypeRoute()->getName() . "\n
+            Directia : " . $advertObj->getDirection()->getName() . "\n
+            Numarul de locuri: " . $advertObj->getPNumber() . "\n
+            Data de plecare: " . $advertObj->getDepartureDate() . "\n
+        ";
+        if ($advertObj->getReturnDate())
+        {
+            $postMessage .= "
+                Data de intoarcere : " . $advertObj->getReturnDate() . "\n
+                Comentariu : " . $advertObj->getComment() . "
+            ";
+        }
+
+        $postLink = 'http://www.adventure.fun.gg/showAdvert/' . $advertObj->getId();
+        $param1=explode("&",$token);
+        $param2=explode("=",$param1[0]);
+        $token=$param2[1];
+        $attachment = array('message' => $postMessage,
+                    'access_token' => $token,
+                    'name' => $postName,
+                    'caption' => 'Attachment Caption',
+                    'link' => $postLink,
+                    'description' => 'Description .....',
+                    'actions' => array(array('name' => $postName, 
+                                      'link' => $postLink))
+                    );
+
+//        $result = $facebook->api('/'.$FB_APP_ID.'/feed/', 'post', $attachment);
 
         $this->redirect('viewAdverts/adverts');
     }
